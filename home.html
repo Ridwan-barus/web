@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Bowlary</title>
+</head>
+<body>
+    <div class = "base-layer">
+        <div class = "image-container">
+            <div class="video-container">
+                <video autoplay loop muted src="asset/cloud.mp4"></video>
+                <div class="video-background"></div>
+            </div>
+            <div class = "navbar-container" id="navbar">
+                <ul class = "ul-navbar">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div class="menu-btn">
+                        <li class = "li-navbar">
+                            <button id="menu-btn" onclick="togglePopup()"><i class="fa-solid fa-bars fa-lg" ></i></button>
+                        </li>
+                    </div>
+                </ul>
+                <div class="menu-bar" id="menu">
+                    <div class="item">
+                        <div class="item1">
+                            <a href="financial.html"><h3>Financial</h3></a>
+                            <hr class="line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item2">
+                            <a href=""><h3>Pre Order</h3></a>
+                            <hr class="line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "text">
+                <h1>Entrepreneur Fair</h1>
+                <h2>Lorem ipsum sit dolor amet</h2>
+            </div>
+        </div>
+        <div class = "container">
+            <div class="profile">
+                <div class = "bussiness-background">
+                    <h2>Bussiness Background</h2>
+                    <div class="text">
+                        <p>Bowlary adalah sebuah usaha bisnis kuliner yang hadir dengan konsep yang 
+                            modern dan inovatif dalam menghadirkan makanan dan minuman yang berkualitas, cepat dan praktis tanpa menghilangkan cita rasanya. Bowlary menyajikan berbagai pilihan menu makanan dan minuman untuk memenuhi selera masyarakat baik kota maupun desa. Setiap hidangan dibuat dengan bahan-bahan segar dan berkualitas, menjadikan usaha ini tempat bagi para pecinta makanan yang mencari hidangan cepat namun tetap berkualitas.                    
+                            </p>
+                        <p>Bowlary berasal dari ide untuk memadukan makanan tradisional dan gaya penyajian yang modern di dalam box, Box menjadi simbol dari kemudahan, praktis dan kenyamanan. Berkat penyajiannya yang sederhana, menjadikan pelanggan dapat menikmati makanan mereka dapat menikmati makanannya dimana saja, entah di kantor, di rumah atau saat bepergian.</p>
+                    </div>
+                </div>
+                <div class="visi-misi-content">
+                    <div class = "visi-misi">
+                        <h2>Vision and Missions Statement</h2>
+                    </div>
+                    <div class = "visi">
+                        <h3>Visi</h3>
+                        <p>Menjadi merek terkemuka di industri kuliner yang menggabungkan cita rasa otentik dibungkus dengan penyajian yang modern dalam setiap makanan yang disajikan.</p>
+                    </div>
+                    <div class = "misi">
+                        <h3 class = "misi-header">Misi</h3>
+                        <ul class = "misi-texts">
+                            <li class = "misi-text">Menyediakan hidangan ricebowl dan bakmi yang lezat, sehat dan cepat untuk semua kalangan, dengan mengutamakan kualitas dan kepuasan pelanggan.</li>
+                            <li class = "misi-text">Menciptakan menu baru dengan cita rasa tradisional dan modern agar menarik pasar.</li>
+                            <li class = "misi-text">Membangun interaksi dengan pelanggan melalui layanan yang ramah, responsif, dan mendengarkan masukan untuk terus meningkatkan pelayanan.</li>
+                            <li class = "misi-text">Penggunaan bahan baku segar dan berkualitas dalam setiap hidangan, untuk memastikan rasa otentik tetap terjaga.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="product-containers">
+                <div class = "produk-container">
+                    <div class="bmc-cihuy">
+                        <div class="documentation">
+                            <h2>Documentation</h2>
+                        </div>
+                        <div class = "bmc">
+                            <div class="bmc-slider">
+                                <div class="documentation-slider">
+                                    <div class="slide">
+                                        <div class="foto-container"><video autoplay loop muted src="asset/cinematic.mp4" class="video"></video></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4"></video></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/po2.mp4"></video></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><img src="asset/test2.jpg" alt=""></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
+                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="next-button"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="slider-indicator">
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                </div>
+                                <div class="next-button"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "produk">
+                        <div class="description">
+                            <h2>Description</h2>
+                        </div>
+                        <div class = "produks">
+                            <div class = "foto-produk">
+                                <img src="asset/bakmi.jpg" class="img">
+                            </div>
+                            <div class = "produk-texts">
+                                <div class="produk-text">
+                                    <h3>Bakmi Super</h3>
+                                    <div class="line1"></div>
+                                </div>
+                                <div class="desc">
+                                    <h5>Bakmi adalah hidangan mie yang disajikan dengan topping daging ayam, sayuran dan pelengkap lainya.</h5>
+                                    <div class="likes">
+                                        <i class="fa-solid fa-heart like-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "produks">
+                            <div class = "foto-produk">
+                                <img src="asset/ricebowl.jpg" class="img">
+                            </div>
+                            <div class = "produk-texts">
+                                <div class="produk-text">
+                                    <h3>Ricebowl</h3>
+                                    <div class="line2"></div>
+                                </div>
+                                <div class="desc">
+                                    <h5>Ricebowl adalah hidangan nasi dengan ayam ditambah sayuran untuk menjaga keseimbangan gizi.</h5>
+                                    <div class="likes">
+                                        <i class="fa-solid fa-heart like-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "produks">
+                            <div class = "foto-produk">
+                                <img src="asset/nutrisari.jpg" class="img">
+                            </div>
+                            <div class = "produk-texts">
+                                <div class="produk-text">
+                                    <h3>Nutrisari Milky Orange</h3>
+                                    <div class="line3"></div>
+                                </div>
+                                <div class="desc">
+                                    <h5>Nutrisari Milky Orange adalah minuman jeruk yang terasa sedikit asam untuk menciptakan rasa yang unik.</h5>
+                                    <div class="likes">
+                                        <i class="fa-solid fa-heart like-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "produks">
+                            <div class = "foto-produk">
+                                <img src="asset/bengbeng.jpg" class="img">
+                            </div>
+                            <div class = "produk-texts">
+                                <div class="produk-text">
+                                    <h3>Ice Beng Beng</h3>
+                                    <div class="line4"></div>
+                                </div>
+                                <div class="desc">
+                                    <h5>Ice Beng Beng adalah minuman coklat yang dicampur dengan rempahan oreo.</h5>
+                                    <div class="likes">
+                                        <i class="fa-solid fa-heart like-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2 class="organisasi">Organization Structures</h2>
+                <div class="kartu-kontainer">
+                    <div class="kartu" class="l">
+                        <img src="asset/ridwan.jpg" alt="" class="kartu-foto">
+                        <div class="kartu-nama">
+                            <div class="nama">
+                                <h3>Muhammad Ridwan Barus</h3>
+                                <h4>Manager Finansial</h4>
+                            </div>
+                            <div class="social">
+                                <a class="icon" href="https://www.instagram.com/ridwanbarus_/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kartu">
+                        <img src="asset/januari.jpg" alt="" class="kartu-foto">
+                        <div class="kartu-nama">
+                            <div class="nama">
+                                <h3>Januari Rivaldo Hasibuan</h3>
+                                <h4>Manager Operasional</h4>
+                            </div>
+                            <div class="social">
+                                <a class="icon" href="https://www.instagram.com/january_hasibuan/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kartu">
+                        <img src="asset/deka.JPG" alt="" class="kartu-foto">
+                        <div class="kartu-nama">
+                            <div class="nama">
+                                <h3>Ramadheka Ardianperkasa</h3>
+                                <h4>Director</h4>
+                            </div>
+                            <div class="social">
+                                <a class="icon" href="https://www.instagram.com/dekatm7/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kartu">
+                        <img src="asset/aldan.jpg" alt="" class="kartu-foto">
+                        <div class="kartu-nama">
+                            <div class="nama">
+                                <h3>Aldan Fikri</h3>
+                                <h4>Manager Logistik</h4>
+                            </div>
+                            <div class="social">
+                                <a class="icon" href="https://www.instagram.com/aldnfkri/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kartu" class="l">
+                        <img src="asset/alfian.jpg" alt="" class="kartu-foto">
+                        <div class="kartu-nama">
+                            <div class="nama">
+                                <h3>Alfian Nurcahyanto</h3>
+                                <h4>Manager Marketing</h4>
+                            </div>
+                            <div class="social">
+                                <a class="icon" href="https://www.instagram.com/alfianncy/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bmc">
+                <h2 class="struktur">Bussiness Model Canvas</h2>
+                <div class="bmc-list">
+                    <div class="bmc-test">
+                        <div class="bmc-partner">
+                            <h3 class="header">Key Partners</h3>
+                            <ul>
+                                <li>Tsaqib Plastik Jaya</li>
+                                <li>Pasar</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-column">
+                            <div class="bmc-activities">
+                                <h3 class="header">Key Activities</h3>
+                                <ul>
+                                    <li>Membeli bahan baku</li>
+                                    <li>Produksi makanan dan minuman</li>
+                                    <li>Pengemasan produk</li>
+                                    <li>Pemasaran produk</li>
+                                </ul>
+                            </div>
+                            <div class="bmc-resource">
+                                <h3 class="header">Key Resources</h3>
+                                <ul>
+                                    <li>Sumber Daya Manusia</li>
+                                    <li>Modal</li>
+                                    <li>Bahan baku</li>
+                                    <li>Peralatan</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bmc-value-proportion">
+                            <h3 class="header">Value Proportions</h3>
+                            <ul>
+                                <li>Praktis dan Sehat</li>
+                                <li>Harga Terjangkau</li>
+                                <li>Kemasan Ramah Lingkungan</li>
+                                <li>Cepat dan Nyaman</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-column">
+                            <div class="bmc-customer-relationship">
+                                <h3 class="header">Customer Relationship</h3>
+                                <ul>
+                                    <li>Feedback Pelanggan</li>
+                                </ul>
+                            </div>
+                            <div class="bmc-channel">
+                                <h3 class="header">Channels</h3>
+                                <ul>
+                                    <li>Whatsapp : 0852-1956-6243</li>
+                                    <li>Instagram : @bowlary_</li>
+                                    <li>Tiktok : @bowlary_</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bmc-customer-segment">
+                            <h3 class="header">Customer Segments</h3>
+                            <ul>
+                                <li>Pekerja Kantoran</li>
+                                <li>Mahasiswa</li>
+                                <li>Siswa SMA/K/Sederajat</li>
+                                <li>Ibu Rumah Tangga</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bmc-test1">
+                        <div class="bmc-cost">
+                            <h3 class="header">Cost Structures</h3>
+                            <ul>
+                                <li>Biaya Variable (Bahan baku)</li>
+                                <li>Biaya Investasi (Peralatan)</li>
+                                <li>Biaya Tetap (Gaji, Listrik, dll)</li>
+                                <li>Biaya Launching (Banner, Brosur, dll)</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-revenue">
+                            <h3 class="header">Revenue Streams</h3>
+                            <ul>
+                                <li>Penjualan Produk Makanan</li>
+                                <li>Penjualan Produk Minuman</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bmc-desc">
+                    <div class="text-container">
+                        <div class="bmc-container">
+                            <h3 class="header">Key Partners</h3>
+                            <div class="line1"></div>
+                            <ul class ="item-container">
+                                <li class="item">Pasar : Sebagai supplier dari bahan baku yaitu sayuran-sayuran dan ayam.</li>
+                                <li class="item">Tsaqib Plastik Jaya : Sebagai supplier dari kemasan dan peralatan serta bumbu-bumbu.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Key Activities</h3>
+                            <div class="line2"></div>
+                            <ul class ="item-container">
+                                <li class="item">Membeli Bahan Baku : Membeli bahan baku dari toko-toko untuk memasak produk-produk kami.</li>
+                                <li class="item">Produksi Makanan dan Minuman : Menyiapkan makanan dan minuman dengan bahan yang fresh.</li>
+                                <li class="item">Pengemasan Produk : Produk dikemas dengan bahan yang ramah lingkungan.</li>
+                                <li class="item">Pemasaran Produk : Melakukan pemasaran melalui sosial media.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Key Resource</h3>
+                            <div class="line3"></div>
+                            <ul class ="item-container">
+                                <li class="item">Sumber Daya Manusia : Pegawai kami cukup terampil dalam memasak.</li>
+                                <li class="item">Modal : Biaya yang digunakan untuk membeli bahan-bahan yaitu bahan baku dan peralatan serta kemasan.</li>
+                                <li class="item">Bahan Baku : Menggunakan bahan-bahan yang berkualitas.</li>
+                                <li class="item">Peralatan : Menggunakan mangkuk box dan peralatan makan yang dapat dibawa kemana saja.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Value Proportions</h3>
+                            <div class="line4"></div>
+                            <ul class ="item-container">
+                                <li class="item">Praktis dan Sehat : Dibuat menggunakan bahan yang fresh.</li>
+                                <li class="item">Harga yang Terjangkau : Harga kaki lima, rasa bintang lima.</li>
+                                <li class="item">Kemasan Ramah Lingkungan : Menggunakan kemasan yang dapat di daur ulang.</li>
+                                <li class="item">Cepat dan Nyaman : Cocok untuk orang sibuk dan ingin makan cepat tanpa mengorbankan kualitas.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Customer Relationship</h3>
+                            <div class="line5"></div>
+                            <ul class ="item-container">
+                                <li class="item">Feedback Pelanggan : Mendengarkan masukkan konsumen untuk inovasi dan pelayanan yang lebih baik.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Channels</h3>
+                            <div class="line6"></div>
+                            <ul class ="item-container">
+                                <li class="item">Whatsapp : 0852-1956-6243</li>
+                                <li class="item">Instagram : @bowlary_</li>
+                                <li class="item">Tiktok : @bowlary_</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Customer Segment</h3>
+                            <div class="line7"></div>
+                            <ul class ="item-container">
+                                <li class="item">Pekerja Kantoran : Mereka yang membutuhkan makanan minuman yang cepat dan praktis pada saat jam makan siang.</li>
+                                <li class="item">Mahasiswa : Mereka yang mencari makanan dan minuman dengan harga terjangkau dan mengenyangkan.</li>
+                                <li class="item">Siswa SMA/K/Sederajat : Mereka yang mencari makanan dan minuman dengan harga yang terjangkau.</li>
+                                <li class="item">Ibu Rumah Tangga : Mereka yang ingin mencoba makanan yang kekinian.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Cost Structures</h3>
+                            <div class="line8"></div>
+                            <ul class ="item-container">
+                                <li class="item">Biaya Variable : Yaitu biaya untuk bahan baku.</li>
+                                <li class="item">Biaya Investasi : Yaitu biaya untuk peralatan dan kemasan.</li>
+                                <li class="item">Biaya Tetap : Yaitu biaya untuk gaji karyawan, listrik.</li>
+                                <li class="item">Biaya Launching : Yaitu biaya untuk banner, brosur dan katalog.</li>
+                            </ul>
+                        </div>
+                        <div class="bmc-container">
+                            <h3 class="header">Revenue Streams</h3>
+                            <div class="line9"></div>
+                            <ul class ="item-container">
+                                <li class="item">Penjualan Produk Makanan : Pendapatan utama dari ricebowl dan bakmi.</li>
+                                <li class="item">Penjualan Produk Minuman : Menjual minuman sebagai pelengkap.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="closure">
+                <h2>Closure</h2>
+                <p>Bisnis makanan dari minuman ini dapat memperoleh keuntungan dengan membuat masyarakat termotivasi untuk mencari makanan dan minuman yang praktis serta untuk menambah mood mereka. </p>
+                <p class = "closure-text-2">Kesimpulan dan tujuan agar produk yang kita pasarkan diterima di kalangan mahasiswa, pekerja kantor, ibu rumah tangga dan siswa siswi SMA/SMK/Sederajat, kita harus membuat produk yang berkualitas dan lezat, yaitu dengan :</p>
+                <ul class = "closure-list">
+                    <li>Membuat produk dengan harga terjangkau dan rasa yang terjamin</li>
+                    <li>Membuat desain yang baru dengan mengikuti zaman sekarang</li>
+                    <li>Memilih dan menentukan wilayah pemasaran yang menguntungkan</li>
+                    <li>Membuat produk menjadi semenarik mungkin</li>
+                </ul>   
+            </div>
+            <div class="gif">
+                <video autoplay loop muted src="asset/videoplayback.mp4"></video>
+            </div>
+        </div>
+        <div class = "footer-container">
+            <div class = "footer">
+                <h3>Social</h3>
+                <div class="popup" id="popup">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <button type="button" class="btn-close" onclick="closePopup()"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                        <div class="text">
+                            <p>Harap hubungi nomor dibawah ini</p>
+                            <p class="nomor">+62 852 1956 6243</p>
+                        </div>
+                        <button type="button" class="btn-ok" onclick="closePopup()">OK</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn" onclick="openPopup()">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i>
+                </button>
+                <a class ="social-icon" href="https://www.instagram.com/bowlary_/">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </a>
+                <a class ="social-icon" href="https://www.tiktok.com/@bowlary_">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <hr class="line">
+                <div class="div2"></div>
+                <h4 class = "lokasi">Jl. Sapta No 28 RT 3 RW 1 Tebet, Menteng Dalam, Jakarta Selatan</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // like system
+        const likedIcon = document.querySelectorAll(".like-icon");
+
+
+        likedIcon.forEach(icon => {
+            icon.addEventListener("click", function() {
+                icon.classList.toggle("liked");
+            });
+        });
+            
+
+
+        // menu popup system
+        const menu = document.getElementById("menu");
+
+        function togglePopup() {
+            menu.classList.toggle("opened");
+        }
+        
+
+        // popup system
+        const popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("opened");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closePopup() {
+            popup.classList.remove("opened");
+            document.body.classList.remove("no-scroll");
+        }
+
+
+        // slide documentation system
+        let currentIndex = 0;
+        const figure = document.querySelector('.documentation-slider');
+        const slides = document.querySelectorAll('.documentation-slider .slide');
+        const totalSlides = slides.length;
+        const indicators = document.querySelectorAll('.slider-indicator .item');    
+
+        function updateSlidePosition() {
+            figure.style.transform = `translateX(-${currentIndex * 20}%)`;
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        document.querySelector('.next-button:last-of-type').addEventListener('click', () => {
+            if(currentIndex < totalSlides - 1) {
+                currentIndex++;
+            }
+            else {
+                currentIndex = 0;
+            }
+            updateSlidePosition();
+        });
+
+        document.querySelector('.next-button:first-of-type').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - 1; // Loop kembali ke slide terakhir
+            }
+            updateSlidePosition();
+        });
+
+        // Event listener untuk indikator slider
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlidePosition();
+            });
+        });
+
+        updateSlidePosition(); // Inisialisasi posisi pertama
+
+
+        // sticky navbar system
+        window.onscroll = function() { stickyNavbar() };
+
+        var navbar = document.getElementById("navbar");
+        var menuBtn = document.getElementById("menu-btn");
+        var sticky = navbar.offsetTop;
+        var maxScroll = 500;  // Jumlah jarak scroll sebelum mencapai opacity penuh ///
+
+        function stickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+
+                // Hitung opacity berdasarkan jarak scroll
+                var scrollY = window.pageYOffset - sticky;
+                var opacity = Math.min(scrollY / maxScroll, 1);  // Nilai opacity 0-1
+                var shadow = Math.min(scrollY / maxScroll, 0.1);
+
+                // Ubah warna background dengan opacity bertahap
+                navbar.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                navbar.style.boxShadow = `0 4px 8px rgba(0, 0, 0, ${shadow})`;
+                menuBtn.style.color = `rgba(33, 33, 33, 1)`;
+
+            } else {
+                navbar.classList.remove("sticky");
+                navbar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+                navbar.style.boxShadow = "rgba(0, 0, 0, 0)";
+                menuBtn.style.color = `rgba(255, 255, 255, 1)`;
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

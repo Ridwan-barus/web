@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="financial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Financial</title>
+</head>
+<body>
+    <div class = "base-layer">
+        <div class = "image-container">
+            <div class = "navbar-container" id="navbar">
+                <ul class = "ul-navbar">
+                    <div class="logo">
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div class="menu-btn">
+                        <li class = "li-navbar">
+                            <button onclick="togglePopup()"><i class="fa-solid fa-bars fa-lg"></i></button>
+                        </li>
+                    </div>
+                </ul>
+                <div class="menu-bar" id="menu">
+                    <div class="item">
+                        <div class="item1">
+                            <a href="home.html"><h3>Home</h3></a>
+                            <hr class="line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item2">
+                            <a href=""><h3>Pre Order</h3></a>
+                            <hr class="line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="invest">
+                <h3>Biaya Investasi</h3>
+                <table>
+                    <tr>
+                        <th class="line">Nomor</th>
+                        <th class="line">Keterangan</th>
+                        <th class="line">Quantity</th>
+                        <th class="line">Harga Satuan</th>
+                        <th class="line">Jumlah</th>
+                        <th class="line">Nama Toko</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Kompor Portable Listrik</th>
+                        <th>1</th>
+                        <th>2.000.000</th>
+                        <th>2.000.000</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>Panci</th>
+                        <th>1</th>
+                        <th>204.250</th>
+                        <th>204.250</th>
+                        <th>Shopee/widanaesya</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Termos Es</th>
+                        <th>1</th>
+                        <th>29.800</th>
+                        <th>29.800</th>
+                        <th>Shopee/AngelYvone</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th>Centong Nasi</th>
+                        <th>1</th>
+                        <th>2.500</th>
+                        <th>2.500</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th>Saringan</th>
+                        <th>2</th>
+                        <th>7.500</th>
+                        <th>15.000</th>
+                        <th>Tetap Segar</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Jumlah</th>
+                        <th>2.251.550</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="fixed">
+                <h3>Biaya Tetap</h3>
+                <table>
+                    <tr>
+                        <th class="line">Nomor</th>
+                        <th class="line">Keterangan</th>
+                        <th class="line">Quantity</th>
+                        <th class="line">Harga Satuan</th>
+                        <th class="line">Jumlah</th>
+                        <th class="line">Nama Toko</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Gaji Karyawan</th>
+                        <th>5</th>
+                        <th>100.000</th>
+                        <th>500.000</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>Kuota</th>
+                        <th>1</th>
+                        <th>70.000</th>
+                        <th>70.000</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Listrik</th>
+                        <th>1</th>
+                        <th>100.000</th>
+                        <th>100.000</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th>Galon</th>
+                        <th>1</th>
+                        <th>36.000</th>
+                        <th>36.000</th>
+                        <th>Warung Madura</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Jumlah</th>
+                        <th>706.000</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="variable">
+                <h3>Biaya Variable</h3>
+                <table>
+                    <tr>
+                        <th class="line">Nomor</th>
+                        <th class="line">Keterangan</th>
+                        <th class="line">Quantity</th>
+                        <th class="line">Harga Satuan</th>
+                        <th class="line">Jumlah</th>
+                        <th class="line">Nama Toko</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Ayam Filet</th>
+                        <th>1</th>
+                        <th>50.000</th>
+                        <th>50.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>Bawang Putih</th>
+                        <th>1</th>
+                        <th>8.750</th>
+                        <th>8.750</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Tepung Terigu</th>
+                        <th>1</th>
+                        <th>4.500</th>
+                        <th>4.500</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th>Tepung Serbaguna</th>
+                        <th>6</th>
+                        <th>3.000</th>
+                        <th>18.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th>Royco</th>
+                        <th>4</th>
+                        <th>500</th>
+                        <th>2.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <th>Lada Halus</th>
+                        <th>2</th>
+                        <th>1.000</th>
+                        <th>2.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <th>Kulit Ayam</th>
+                        <th>1</th>
+                        <th>20.000</th>
+                        <th>20.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <th>Bawang Merah</th>
+                        <th>1</th>
+                        <th>10.000</th>
+                        <th>10.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <th>Ebi</th>
+                        <th>1</th>
+                        <th>8.000</th>
+                        <th>8.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <th>Daun Bawang</th>
+                        <th>1</th>
+                        <th>2.000</th>
+                        <th>2.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>11</th>
+                        <th>Sawi</th>
+                        <th>1</th>
+                        <th>2.000</th>
+                        <th>2.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <th>Kerupuk Pangsit</th>
+                        <th>1</th>
+                        <th>10.000</th>
+                        <th>10.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>13</th>
+                        <th>Kecap Asin</th>
+                        <th>1</th>
+                        <th>12.000</th>
+                        <th>12.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>14</th>
+                        <th>Garam</th>
+                        <th>1</th>
+                        <th>4.000</th>
+                        <th>4.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>15</th>
+                        <th>Micin</th>
+                        <th>1</th>
+                        <th>4.000</th>
+                        <th>4.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>16</th>
+                        <th>Mie</th>
+                        <th>1</th>
+                        <th>9.000</th>
+                        <th>9.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>17</th>
+                        <th>Minyak</th>
+                        <th>1</th>
+                        <th>18.000</th>
+                        <th>18.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>18</th>
+                        <th>Daun Selada</th>
+                        <th>1</th>
+                        <th>3.000</th>
+                        <th>3.000</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>19</th>
+                        <th>Timun</th>
+                        <th>1</th>
+                        <th>3.500</th>
+                        <th>3.500</th>
+                        <th>Pasar</th>
+                    </tr>
+                    <tr>
+                        <th>20</th>
+                        <th>Beras</th>
+                        <th>2</th>
+                        <th>16.000</th>
+                        <th>32.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>21</th>
+                        <th>Nutrisari</th>
+                        <th>1</th>
+                        <th>13.000</th>
+                        <th>13.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>22</th>
+                        <th>Beng Beng Drink</th>
+                        <th>1</th>
+                        <th>19.000</th>
+                        <th>19.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>23</th>
+                        <th>Es Batu</th>
+                        <th>1</th>
+                        <th>7.000</th>
+                        <th>7.000</th>
+                        <th>Warung</th>
+                    </tr>
+                    <tr>
+                        <th>24</th>
+                        <th>Gelas Platik</th>
+                        <th>1</th>
+                        <th>18.600</th>
+                        <th>18.600</th>
+                        <th>Shopee/pabrikplastik24</th>
+                    </tr>
+                    <tr>
+                        <th>25</th>
+                        <th>Tutup Gelas Plastik</th>
+                        <th>1</th>
+                        <th>14.880</th>
+                        <th>14.880</th>
+                        <th>Shopee/pabrikplastik24</th>
+                    </tr>
+                    <tr>
+                        <th>26</th>
+                        <th>Sedotan</th>
+                        <th>1</th>
+                        <th>17.000</th>
+                        <th>17.000</th>
+                        <th>Shopee/gudangaccdepok</th>
+                    </tr>
+                    <tr>
+                        <th>27</th>
+                        <th>Sendok Garpu</th>
+                        <th>1</th>
+                        <th>5.000</th>
+                        <th>5.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>28</th>
+                        <th>Cup+Tutup</th>
+                        <th>1</th>
+                        <th>33.000</th>
+                        <th>33.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>29</th>
+                        <th>Saus Sachet</th>
+                        <th>1</th>
+                        <th>8.000</th>
+                        <th>8.000</th>
+                        <th>Tsaqib Jaya Plastik</th>
+                    </tr>
+                    <tr>
+                        <th>30</th>
+                        <th>Kaldu Jamur</th>
+                        <th>1</th>
+                        <th>8.000</th>
+                        <th>8.000</th>
+                        <th>Segar Sayur</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Jumlah</th>
+                        <th>366.230</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="launching">
+                <h3>Biaya Launching</h3>
+                <table>
+                    <tr>
+                        <th class="line">Nomor</th>
+                        <th class="line">Keterangan</th>
+                        <th class="line">Quantity</th>
+                        <th class="line">Harga Satuan</th>
+                        <th class="line">Jumlah</th>
+                        <th class="line">Nama Toko</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Brosur</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>Banner</th>
+                        <th>1</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Katalog</th>
+                        <th>1</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Jumlah</th>
+                        <th>-</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class = "footer-container">
+            <div class = "footer">
+                <h3>Social</h3>
+                <div class="popup" id="popup">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <button type="button" class="btn-close" onclick="closePopup()"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                        <div class="text">
+                            <p>Harap hubungi nomor dibawah ini</p>
+                            <p class="nomor">+62 852 1956 6243</p>
+                        </div>
+                        <button type="button" class="btn-ok" onclick="closePopup()">OK</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn" onclick="openPopup()">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i>
+                </button>
+                <a class ="social-icon" href="https://www.instagram.com/bowlary_/">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </a>
+                <a class ="social-icon" href="https://www.tiktok.com/@bowlary_">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <hr class="line">
+                <div class="div2"></div>
+                <h4 class = "lokasi">Jl. Sapta No 28 RT 3 RW 1 Tebet, Menteng Dalam, Jakarta Selatan</h4>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        // navbar scroll system
+        window.onscroll = function() { stickyNavbar() };
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        var maxScroll = 500;
+    
+        function stickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+
+                // Hitung opacity berdasarkan jarak scroll
+                var scrollY = window.pageYOffset - sticky;
+                var opacity = Math.min(scrollY / maxScroll, 1);  // Nilai opacity 0-1
+
+            } else {
+                navbar.classList.remove("sticky");
+
+            }
+        }
+
+
+        // popup navbar menu system
+        const menu = document.getElementById("menu");
+
+        function togglePopup() {
+            menu.classList.toggle("opened");
+        }
+
+
+        // popup system
+        const popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("opened");
+        }
+
+        function closePopup() {
+            popup.classList.remove("opened");
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+*, html, body {
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #F5F5F5;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    cursor: default;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+h4, h5 {
+    font-weight: normal;
+}
+
+p {
+    font-size: .9em;
+}
+
+
+.navbar-container {
+    color: #818181;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10vh;
+    width: 100%;
+    text-align: right;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.ul-navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0 7em 0 7em;
+    padding: 0;
+}
+
+.ul-navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-navbar .logo img {
+    height: 7vh;
+    width: auto;
+}
+
+.ul-navbar .menu-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.li-navbar {
+    padding: 10px 20px; /* Tambah padding untuk membuat spasi di dalam elemen */
+    text-align: center; /* Mengatur teks di tengah secara horizontal */
+    margin: 5px;
+}
+
+.li-navbar button {
+    background: none;
+    border: none;
+    color: #212121;
+    cursor: pointer;
+}
+
+.menu-bar {
+    background: #ffffff;
+    position: absolute;
+    color: #212121;
+    right: 7em;
+    padding: .5em 1em;
+    opacity: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 .5em .5em;
+}
+
+.menu-bar .item {
+    margin: .5em 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.menu-bar.opened .item h3 {
+    position: relative;
+    cursor: pointer;
+    font-size: .9em;
+}
+
+.menu-bar .line {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0); /* Memulai animasi dari skala 0 */
+    transform-origin: right; /* Memulai animasi dari kanan */
+    transition: transform 0.25s ease;
+    margin: 0;
+}
+
+.menu-bar .item:hover .line {
+    transform: scaleX(1); /* Memperluas skala ke 1 untuk lebar penuh */
+}
+
+.menu-bar .item hr {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border: none;
+    background: #212121;
+}
+
+.menu-bar.opened {
+    opacity: 1;
+}
+
+
+.container {
+    margin: 0 7em 2em;
+}
+
+.container h3 {
+    color: #818181;
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1em;
+    border-spacing: 1.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    color: #212121;
+    padding: 8px;
+    font-weight: 500;
+    font-size: .9em;
+}
+th {
+    text-align: center;
+}
+
+tr .line {
+    border-bottom: 1.5px solid #818181;
+    color: #818181;
+}
+
+
+.footer-container {
+    background-color: #141414;
+}
+
+.footer {
+    padding-top: 2em;
+    margin: 0em 7em 0em 7em;
+    color: #818181;
+}
+
+.popup {
+    display: none; /* Mulai dalam keadaan tersembunyi */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.opened {
+    display: flex; /* Tampilkan saat dibuka */
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay */
+}
+
+.popup-content .btn-close {
+    position: absolute;
+    padding: .8em 0 .8em .5em;
+    top: 0;
+    left: 90%;
+    border: 0;
+    background: none;
+    margin-top: .2em;
+    cursor: pointer;
+}
+
+.btn-close i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-ok {
+    width: 100%;
+    border-radius: 1em;
+    border: none;
+    background: greenyellow;
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    background: none;
+    color: #818181;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.popup-content .text {
+    padding: 2em 0 1em 0;
+    color: #333;
+}
+
+.text .nomor {
+    font-weight: 700;
+}
+
+.social-icon {
+    color: #818181;
+    text-decoration: none;
+}
+
+.footer i {
+    padding: 0px 8px 0px 0px;
+}
+
+.footer .line {
+    margin: 2em 0 1em 0;
+    border: 0;
+    border-top: 1px solid;
+}
