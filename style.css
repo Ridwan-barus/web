@@ -25,7 +25,7 @@ p {
 }
 
 .base-layer {
-    background: #F5F5F5;
+    background: #000000;
 }
 
 .container {
@@ -37,14 +37,14 @@ p {
     height: auto;
 }
 
-video {
-    width: 100%;
-    height: auto;
-}
-
 .video-container {
     display: grid; /* Menggunakan grid untuk penataan */
     position: relative; /* Memungkinkan positioning absolut di dalamnya */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
 }
 
 .video-background {
@@ -57,7 +57,7 @@ video {
     justify-content: center; /* Menyelaraskan konten secara horizontal */
     align-items: center; /* Menyelaraskan konten secara vertikal */
     color: white; /* Warna teks */
-    background-color: rgba(0, 0, 0, 0.109); /* Warna latar belakang semi-transparan */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Warna latar belakang semi-transparan */
 }
 
 .navbar-container {
@@ -111,8 +111,13 @@ video {
 .li-navbar button {
     background: none;
     border: none;
-    color: #ffffff;
+    color: #818181;
     cursor: pointer;
+    transition: color .25s ease-in-out;
+}
+
+.li-navbar button:hover {
+    color: #fff;
 }
 
 .menu-bar {
@@ -185,10 +190,10 @@ video {
     text-align: center;
     margin-top: 2em;
     margin-bottom: 2em;
-    background: #ffffff;
+    background: #141414;
     border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #212121;
+    color: #fff;
 }
 
 .bussiness-background h2 {
@@ -204,10 +209,10 @@ video {
 .visi-misi-content {
     margin-top: 2em;
     margin-bottom: 2em;
-    background: #ffffff;
+    background: #141414;
     border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #212121;
+    color: #fff;
 }
 
 .visi-misi {
@@ -295,7 +300,7 @@ video {
 }
 
 .produk-container .bmc-cihuy .bmc {
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek melayang */
     width: auto;
     height: 100%;
@@ -349,7 +354,7 @@ video {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #212121;
+    color: #fff;
 }
 
 .slider .next-button:first-of-type {
@@ -374,7 +379,7 @@ video {
 }
 
 .slider-indicator .item.active {
-    background: #212121; /* Warna aktif */
+    background: #fff; /* Warna aktif */
 }
 
 .produk-container .bmc-cihuy .bmc .img {
@@ -405,7 +410,7 @@ video {
     display: flex;
     cursor: default;
     margin: 1em 0 1em .5em;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek melayang */
     border-radius: 1em;
 }
@@ -423,6 +428,12 @@ video {
 
 .foto-produk .img {
     object-fit: cover;
+    transform: scale(1);
+    transition: transform .25s ease-in-out;
+}
+
+.produks:hover img {
+    transform: scale(1.05);
 }
 
 .produk-texts {
@@ -430,7 +441,7 @@ video {
     width: 65%;
     display: flex;
     flex-direction: column;
-    color: #212121;
+    color: #fff;
 }
 
 .produk-texts .desc {
@@ -453,6 +464,8 @@ video {
     opacity: 1;
 }
 
+
+
 .likes i {
     cursor: pointer;
 }
@@ -466,7 +479,7 @@ video {
 }
 
 .produk-text .line1 {
-    background: #212121;
+    background: #fff;
     width: 0%;
     height: .15em;
     border-radius: 10em;
@@ -478,7 +491,7 @@ video {
 }
 
 .produk-text .line2 {
-    background: #212121;
+    background: #fff;
     width: 0%;
     height: .15em;
     border-radius: 10em;
@@ -490,7 +503,7 @@ video {
 }
 
 .produk-text .line3 {
-    background: #212121;
+    background: #fff;
     width: 0%;
     height: .15em;
     border-radius: 10em;
@@ -502,7 +515,7 @@ video {
 }
 
 .produk-text .line4 {
-    background: #212121;
+    background: #fff;
     width: 0%;
     height: .15em;
     border-radius: 10em;
@@ -628,7 +641,7 @@ video {
     height: auto;
     margin-top: 2em;
     margin-bottom: 2em;
-    color: #212121;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -672,7 +685,7 @@ video {
 .bmc-partner {
     width: 20%;
     height: 100%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
     display: flex;
     flex-direction: column;
@@ -686,7 +699,7 @@ video {
 
 .bmc-activities {
     height: 49.75%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
     display: flex;
     flex-direction: column;
@@ -700,7 +713,7 @@ video {
 
 .bmc-resource {
     height: 49.75%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
     display: flex;
     flex-direction: column;
@@ -715,7 +728,7 @@ video {
 .bmc-value-proportion {
     width: 20%;
     height: 100%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -730,7 +743,7 @@ video {
 
 .bmc-customer-relationship {
     height: 49.75%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -744,7 +757,7 @@ video {
 
 .bmc-channel {
     height: 49.75%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -759,7 +772,7 @@ video {
 .bmc-customer-segment {
     width: 20%;
     height: 100%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -773,7 +786,7 @@ video {
 
 .bmc-cost {
     width: 50%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -788,7 +801,7 @@ video {
 
 .bmc-revenue {
     width: 50%;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -807,7 +820,7 @@ video {
     justify-content: center;
     align-items: center;
     margin: .5em;
-    color: #818181;
+    color: #fff;
     font-size: 1.5em;
     font-weight: 500;
     padding-top: 1.5em;
@@ -821,11 +834,11 @@ video {
 
 .bmc-container {
     border-radius: 1em;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 1em 0 1em 0;
     padding: .5em 1em .5em 1em;
-    color: #212121;
+    color: #ffffff;
 }
 
 .bmc-container .line1 {
@@ -965,9 +978,10 @@ video {
     text-align: center;
     margin-top: 2em;
     margin-bottom: 2em;
-    background: #ffffff;
+    background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
+    color: #fff;
 }
 
 .closure h2 {
@@ -1026,7 +1040,7 @@ video {
 }
 
 .popup-content {
-    background-color: #ffffff;
+    background: #141414;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
