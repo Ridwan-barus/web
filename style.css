@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 *, html, body {
     margin : 0;
     padding : 0;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -32,22 +36,103 @@ p {
     margin: 0 7em;
 }
 
-.image-container img {
+.header {
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
-.video-container {
-    display: grid; /* Menggunakan grid untuk penataan */
-    position: relative; /* Memungkinkan positioning absolut di dalamnya */
-}
-
-.video-container video {
+.header .content {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
 }
 
-.video-background {
+.header .content .pitch-deck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    color: #ffffff;
+    fill: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header .content .bowlary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -20%);
+    color: #ffffff;
+    fill: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header .content svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+}
+
+.header .content .pitch-deck text {
+    font-size: 10rem;
+}
+
+.header .content .bowlary text {
+    font-size: 5rem;
+}
+
+@keyframes stroke {
+    0% {
+        stroke: white;
+        stroke-width: 0;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        fill: none;
+    }
+    70% {
+        stroke: white;
+    }
+    80% {
+        stroke: white;
+        stroke-width: 3;
+        fill: none;
+    }
+    90% {
+        stroke: white;
+        stroke-width: 3;
+        stroke-dashoffset: -25%;
+        stroke-dasharray:50% 0;
+        fill: rgba(255, 255, 255, 0);
+    }
+    100% {
+        stroke: white;
+        fill: rgba(255, 255, 255, 1);
+        stroke-width: 3;
+    }
+}
+
+.header .content .image {
+    aspect-ratio: 1/1;
+    width: 18em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header .content .image img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.header .content .image .effect {
     position: absolute; /* Membuatnya berada di atas video */
     top: 0; /* Menempatkan di bagian atas */
     left: 0; /* Menempatkan di bagian kiri */
@@ -57,7 +142,7 @@ p {
     justify-content: center; /* Menyelaraskan konten secara horizontal */
     align-items: center; /* Menyelaraskan konten secara vertikal */
     color: white; /* Warna teks */
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Warna latar belakang semi-transparan */
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 45%);
 }
 
 .navbar-container {
@@ -173,17 +258,6 @@ p {
 
 .menu-bar.opened {
     opacity: 1;
-}
-
-.image-container .text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
 }
 
 .bussiness-background {
