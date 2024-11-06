@@ -5,7 +5,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #F5F5F5;
+    background: #000000;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -28,7 +28,7 @@ p {
 
 .navbar-container {
     color: #818181;
-    background: #ffffff;
+    background: #141414;
     top: 0;
     left: 0;
     right: 0;
@@ -77,14 +77,18 @@ p {
 .li-navbar button {
     background: none;
     border: none;
-    color: #212121;
+    color: #818181;
     cursor: pointer;
+    transition: color .1s ease-in-out;
+}
+
+.li-navbar button:hover {
+    color: #fff;
 }
 
 .menu-bar {
-    background: #ffffff;
+    background: #141414;
     position: absolute;
-    color: #212121;
     right: 7em;
     padding: .5em 1em;
     opacity: 0;
@@ -96,6 +100,7 @@ p {
     margin: .5em 0;
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .item a {
@@ -107,6 +112,7 @@ p {
     position: relative;
     cursor: pointer;
     font-size: .9em;
+    color: #fff;
 }
 
 .menu-bar .line {
@@ -128,7 +134,7 @@ p {
     align-items: flex-end;
     justify-content: flex-end;
     border: none;
-    background: #212121;
+    background: #fff;
 }
 
 .menu-bar.opened {
@@ -149,13 +155,13 @@ p {
 
 table {
     width: 100%;
-    background: #ffffff;
+    background: #141414;
     border-radius: 1em;
     border-spacing: 1.5em 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 th, td {
-    color: #212121;
+    color: #fff;
     padding: 8px;
     font-weight: 500;
     font-size: .9em;

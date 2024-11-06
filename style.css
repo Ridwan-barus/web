@@ -113,7 +113,7 @@ p {
     border: none;
     color: #818181;
     cursor: pointer;
-    transition: color .25s ease-in-out;
+    transition: color .1s ease-in-out;
 }
 
 .li-navbar button:hover {
@@ -121,7 +121,8 @@ p {
 }
 
 .menu-bar {
-    background: #ffffff;
+    background: #141414;
+    color: #fff;
     position: absolute;
     right: 7em;
     padding: .5em 1em;
@@ -145,6 +146,7 @@ p {
     position: relative;
     cursor: pointer;
     font-size: 1.1em;
+    color: #fff;
 }
 
 .menu-bar .line {
@@ -166,7 +168,7 @@ p {
     align-items: flex-end;
     justify-content: flex-end;
     border: none;
-    background: #212121;
+    background: #fff;
 }
 
 .menu-bar.opened {
@@ -550,7 +552,6 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
     overflow: hidden;
-    background-color: aqua;
 }
 
 .kartu-kontainer .kartu {
