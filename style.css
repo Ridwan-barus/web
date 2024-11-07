@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -30,126 +30,6 @@ p {
 
 .base-layer {
     background: #000000;
-}
-
-
-
-
-
-/* header */
-.header {
-    width: 100%;
-    height: 100vh;
-}
-
-.header .content {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
-
-.header .content .pitch-deck {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-97%, -50%);
-    color: #ffffff;
-    fill: none;
-    font-weight: bold;
-    text-align: center;
-}
-
-.header .content .bowlary {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-230%, 30%);
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    background-color: white;
-    width: 14rem;
-    height: 3rem;
-}
-
-.header .content .bowlary h1 {
-    width: 100%;
-    height: auto;
-}
-
-.header .content .pitch-deck text {
-    text-transform: uppercase;
-    font-size: 10rem;
-    animation: stroke 5s infinite alternate;
-}
-
-@keyframes stroke {
-    0% {
-        stroke: white;
-        stroke-width: 0;
-        stroke-dashoffset: 25%;
-        stroke-dasharray: 0 50%;
-        fill: none;
-    }
-    70% {
-        stroke: white;
-    }
-    80% {
-        stroke: white;
-        stroke-width: 3;
-        fill: none;
-    }
-    90% {
-        stroke: white;
-        stroke-width: 3;
-        stroke-dashoffset: -25%;
-        stroke-dasharray:50% 0;
-        fill: rgba(255, 255, 255, 0);
-    }
-    100% {
-        stroke: white;
-        fill: rgba(255, 255, 255, 1);
-        stroke-width: 3;
-    }
-}
-
-.header .content .image {
-    aspect-ratio: 1/1;
-    width: 18em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, -50%);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.header .content .image img {
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 100%;
-}
-
-.header .content .image .effect {
-    position: absolute; /* Membuatnya berada di atas video */
-    top: 0; /* Menempatkan di bagian atas */
-    left: 0; /* Menempatkan di bagian kiri */
-    right: 0; /* Menempatkan di bagian kanan */
-    bottom: 0; /* Menempatkan di bagian bawah */
-    display: flex; /* Menggunakan flexbox untuk penataan */
-    justify-content: center; /* Menyelaraskan konten secara horizontal */
-    align-items: center; /* Menyelaraskan konten secara vertikal */
-    color: white; /* Warna teks */
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 45%);
 }
 
 
@@ -189,6 +69,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: pageIn 2s forwards;
+    animation-delay: 1.8s;
 }
 
 .ul-navbar .logo img {
@@ -213,6 +96,9 @@ p {
     color: #818181;
     cursor: pointer;
     transition: color .1s ease-in-out;
+    opacity: 0;
+    animation: pageIn 2s forwards;
+    animation-delay: 1.8s;
 }
 
 .li-navbar button:hover {
@@ -234,6 +120,7 @@ p {
     margin: .5em 0;
     display: flex;
     justify-content: flex-end;
+    width: 80px;
 }
 
 .item a {
@@ -277,92 +164,355 @@ p {
 
 
 
+
+
+
+
+/* scene */
+.scene-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    animation: scene 1.4s alternate forwards;
+    animation-delay: .8s;
+    z-index: 750;
+}
+
+.scene-2 span {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    animation: span 1.5s alternate forwards;
+    animation-delay: .5s;
+}
+
+.scene-2 .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: circle 1.3s forwards;
+    animation-delay: 1.7s;
+    scale: 0;
+    opacity: 1;
+    /*box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;*/
+    z-index: 800;
+}
+
+@keyframes span {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    from {
+        display: block;
+        scale: 0;
+        filter: brightness(100%);
+    }
+    to {
+        scale: 42;
+        filter: brightness(0%);
+    }
+}
+
+@keyframes scene {
+    from {
+        display: flex;
+    }
+    to {
+        display: none;
+    }
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/* header */
+.header {
+    width: 100%;
+    height: 100vh;
+}
+
+.header .content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.header .content .pitch-deck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-97%, -50%);
+    color: #ffffff;
+    fill: none;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.header .content .bowlary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-230%, 30%);
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: white;
+    width: 14rem;
+    height: 3rem;
+    opacity: 0;
+    animation: pageIn 2s forwards;
+    animation-delay: 1.8s;
+}
+
+.header .content .bowlary h1 {
+    width: 100%;
+    height: auto;
+}
+
+.header .content .pitch-deck text {
+    text-transform: uppercase;
+    font-size: 10rem;
+    animation: stroke 5s infinite alternate;
+    animation-delay: 2.5s;
+}
+
+@keyframes stroke {
+    0% {
+        stroke: white;
+        stroke-width: 0;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        fill: none;
+    }
+    70% {
+        stroke: white;
+    }
+    80% {
+        stroke: white;
+        stroke-width: 3;
+        fill: none;
+    }
+    90% {
+        stroke: white;
+        stroke-width: 3;
+        stroke-dashoffset: -25%;
+        stroke-dasharray:50% 0;
+        fill: rgba(255, 255, 255, 0);
+    }
+    100% {
+        stroke: white;
+        fill: rgba(255, 255, 255, 1);
+        stroke-width: 3;
+    }
+}
+
+.header .content .image {
+    aspect-ratio: 1/1;
+    width: 18em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    animation: pageIn 2s forwards;
+    animation-delay: 1.8s;
+}
+
+.header .content .image img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.header .content .image .effect {
+    position: absolute; /* Membuatnya berada di atas video */
+    top: 0; /* Menempatkan di bagian atas */
+    left: 0; /* Menempatkan di bagian kiri */
+    right: 0; /* Menempatkan di bagian kanan */
+    bottom: 0; /* Menempatkan di bagian bawah */
+    display: flex; /* Menggunakan flexbox untuk penataan */
+    justify-content: center; /* Menyelaraskan konten secara horizontal */
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+    color: white; /* Warna teks */
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 45%);
+}
+
+
+
+
+
 /* content */
 .container {
     margin: 0 7em;
-    background-color: aqua;
 }
 
+
+
+
+/* content 1 */
 .container .content-1 {
     height: 100vh;
     width: 100%;
-    background-color: blue;
-}
-
-.bussiness-background {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    background: #141414;
-    border-radius: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
 }
 
-.bussiness-background h2 {
-    margin: .5em;
-    font-size: 1.5em;
+.content-1 .image {
+    width: 18em;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content-1 .image img {
+    object-fit: coover;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.content-1 .image .effect {
+    width: 18em;
+    aspect-ratio: 1/1;
+    position: absolute;
+    display: flex; /* Menggunakan flexbox untuk penataan */
+    justify-content: center; /* Menyelaraskan konten secara horizontal */
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+    color: white; /* Warna teks */
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+}
+
+.content-1 .bussiness-background {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #F8F8F8;
+    padding: 0 7rem;
+}
+
+.content-1 .bussiness-background h2 {
+    margin-bottom: .25em;
+    font-size: 24px;
     font-weight: 500;
 }
 
-.bussiness-background p {
-    padding: 0 3em 3em 3em;
+.content-1 .bussiness-background .text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
 }
 
-.visi-misi-content {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    background: #141414;
+
+
+
+
+
+
+
+/* content 2 */
+.container .content-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.content-2 .visi-misi-content {
     border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.visi-misi {
+.content-2 .visi-misi-content h2{
     text-align: center;
-}
-
-.visi-misi h2 {
     padding: .5em;
-    font-size: 1.5em;
+    font-size: 24px;
     font-weight: 500;
 }
 
-.visi {
+.content-2 .visi {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.misi {
+.content-2 .visi p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 5em;
+}
+
+.content-2 .misi {
     display: flex;
     flex-direction: column;
     padding: 1em;
     margin: 0 3em 3em 3em;
 }
 
-.misi-header {
+.content-2 .misi h3 {
     text-align: center;
 }
 
-.misi-texts {
+.content-2 .misi ul {
     flex-wrap: wrap;
     display: flex;
 }
 
-.misi-texts li {
+.content-2 .misi ul li {
     flex: 1 1 50%;
     box-sizing: border-box; /* Menghitung padding dan border ke dalam ukuran elemen */
     padding: 10px;
     font-size: .9em;
-}
-
-.misi-texts li {
     list-style-type: none; /* Hilangkan bullet asli */
     position: relative;
 }
 
-.misi-texts li::before {
+.content-2 .misi ul li::before {
     content: "•";            /* Custom bullet */
     position: absolute;
     top: .15em;
@@ -370,6 +520,21 @@ p {
     font-size: 1.5em;
 }
 
+
+
+
+
+
+/* content 3 */
+.content-3 {
+    width: 100%;
+    margin: 2em 0;
+}
+
+
+
+
+/* dokumentasi */
 .documentation h2 {
     color: #818181;
     font-size: 1.5em;
@@ -380,11 +545,6 @@ p {
     color: #818181;
     font-size: 1.5em;
     font-weight: 500;
-}
-
-.product-containers {
-    width: 100%;
-    margin: 2em 0;
 }
 
 .produk-container {
@@ -498,10 +658,20 @@ p {
     margin-top: 1em;
 }
 
+
+
+
+
+/* produk deskripsi*/
 .produk-container .produk {
     flex: 1 1 50%;
     box-sizing: border-box;
-    margin: .5em 0;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    height: 39em;
 }
 
 .produk .description {
@@ -512,7 +682,7 @@ p {
     width: auto;
     display: flex;
     cursor: default;
-    margin: 1em 0 1em .5em;
+    margin: .5em 0 .5em .5em;
     background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek melayang */
     border-radius: 1em;
@@ -566,8 +736,6 @@ p {
 .produks:hover .produk-texts .likes {
     opacity: 1;
 }
-
-
 
 .likes i {
     cursor: pointer;
@@ -629,11 +797,16 @@ p {
     width: 44%;
 }
 
-.card-content {
+
+
+
+
+/* conntent 4 */
+.content-4 {
     margin: 2em 0;
 }
 
-.organisasi {
+.content-4 h2 {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -708,10 +881,6 @@ p {
     color: white;
 }
 
-.kartu-nama .nama {
-    cursor: default;
-}
-
 .kartu-nama .social {
     display: flex;
     justify-content: center;
@@ -735,11 +904,21 @@ p {
     object-fit: cover;
 }
 
-.bmc {
+
+
+
+
+
+/* content 5 */
+.content-5 {
     margin: 2em 0;
 }
 
-.bmc .bmc-list {
+
+
+
+/* bmc */
+.content-5 .bmc-list {
     height: auto;
     margin-top: 2em;
     margin-bottom: 2em;
