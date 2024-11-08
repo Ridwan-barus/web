@@ -2,16 +2,24 @@
     box-sizing: border-box;
 }
 
-*, html, body {
-    margin : 0;
-    padding : 0;
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     cursor: default;
 }
 
@@ -20,7 +28,8 @@ h3 {
     font-size: 1em;
 }
 
-h4, h5 {
+h4,
+h5 {
     font-weight: normal;
 }
 
@@ -46,7 +55,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 10vh;
+    max-height: 10vh;
     width: 100%;
     text-align: right;
     z-index: 700;
@@ -60,9 +69,9 @@ p {
 .ul-navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     margin: 0 7em 0 7em;
-    padding: 0;
 }
 
 .ul-navbar .logo {
@@ -71,7 +80,7 @@ p {
     align-items: center;
     opacity: 0;
     animation: pageIn 2s forwards;
-    animation-delay: 1.8s;
+    animation-delay: 1s;
 }
 
 .ul-navbar .logo img {
@@ -85,8 +94,10 @@ p {
 }
 
 .li-navbar {
-    padding: 10px 20px; /* Tambah padding untuk membuat spasi di dalam elemen */
-    text-align: center; /* Mengatur teks di tengah secara horizontal */
+    padding: 10px 20px;
+    /* Tambah padding untuk membuat spasi di dalam elemen */
+    text-align: center;
+    /* Mengatur teks di tengah secara horizontal */
     margin: 5px;
 }
 
@@ -98,7 +109,7 @@ p {
     transition: color .1s ease-in-out;
     opacity: 0;
     animation: pageIn 2s forwards;
-    animation-delay: 1.8s;
+    animation-delay: 1s;
 }
 
 .li-navbar button:hover {
@@ -139,14 +150,17 @@ p {
     width: 100%;
     height: 2px;
     background-color: white;
-    transform: scaleX(0); /* Memulai animasi dari skala 0 */
-    transform-origin: right; /* Memulai animasi dari kanan */
+    transform: scaleX(0);
+    /* Memulai animasi dari skala 0 */
+    transform-origin: right;
+    /* Memulai animasi dari kanan */
     transition: transform 0.25s ease;
     margin: 0;
 }
 
 .menu-bar .item:hover .line {
-    transform: scaleX(1); /* Memperluas skala ke 1 untuk lebar penuh */
+    transform: scaleX(1);
+    /* Memperluas skala ke 1 untuk lebar penuh */
 }
 
 .menu-bar .item hr {
@@ -160,6 +174,128 @@ p {
 .menu-bar.opened {
     opacity: 1;
 }
+
+
+
+
+
+/* loader animation */
+.base-layer {
+    display: none;
+}
+
+.loaded {
+    display: none;
+}
+
+.scene-2 {
+    display: none;
+}
+
+
+
+
+
+
+/* preload animation */
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --base-clr: #fff;
+    --clr-1: #833ab4;
+    --clr-2: #fd1d1d;
+    --clr-3: #fcb045;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 700;
+}
+
+.loader .loading {
+    width: 60px;
+    height: 60px;
+    background: var(--base-clr);
+    border-radius: 50%;
+    position: relative;
+}
+
+.loading::before, .loading::after {
+    content: "";
+    position: absolute;
+    inset: -.25rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-1),
+        var(--clr-2),
+        var(--clr-3),
+        var(--clr-2),
+        var(--clr-1));
+    border-radius: inherit;
+    animation: rotation 2s linear infinite;
+}
+
+.loading::after {
+    filter: blur(.5rem);
+}
+
+.loader .loading-visual {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--base-clr);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loading-visual .loaded {
+    width: 25px; /* Tentukan ukuran sesuai keinginan */
+    height: 25px; /* Tentukan ukuran sesuai keinginan */
+    background: #000; /* Warna latar belakang sebagai contoh */
+    border-radius: 50%;
+    transform: translateY(50px);
+    animation: transform 1s alternate forwards;
+}
+
+@keyframes transform {
+    0% {
+        transform: translateY(50px);
+    }
+    90% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+
+
 
 
 
@@ -179,55 +315,40 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background: #fff;
-    animation: scene 1.4s alternate forwards;
-    animation-delay: .8s;
+    /*background: #fff;*/
+    animation: scene 1s alternate forwards;
+    /*animation-delay: .8s;*/
     z-index: 750;
-}
-
-.scene-2 span {
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: 600;
-    animation: span 1.5s alternate forwards;
-    animation-delay: .5s;
+    display: none;
+    opacity: 0;
 }
 
 .scene-2 .circle {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     background: #000;
     border: 2px solid #fff;
     border-radius: 50%;
     animation: circle 1.3s forwards;
-    animation-delay: 1.7s;
-    scale: 0;
-    opacity: 1;
-    /*box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;*/
+    /*animation-delay: 5s;*/
+    scale: 1;
+    box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
     z-index: 800;
-}
-
-@keyframes span {
-    0% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 @keyframes circle {
     from {
         display: block;
         scale: 0;
+        opacity: 1;
         filter: brightness(100%);
     }
+
     to {
         scale: 42;
+        opacity: 0;
+        display: none;
         filter: brightness(0%);
     }
 }
@@ -235,8 +356,11 @@ p {
 @keyframes scene {
     from {
         display: flex;
+        opacity: 1;
     }
+
     to {
+        opacity: 0;
         display: none;
     }
 }
@@ -245,6 +369,7 @@ p {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -278,6 +403,7 @@ p {
     font-weight: bold;
     text-align: center;
     font-family: "Raleway", sans-serif;
+    z-index: 200;
 }
 
 .header .content .bowlary {
@@ -285,7 +411,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-230%, 30%);
-    color: #000000;
+    background: white;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -294,24 +420,34 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    background-color: white;
     width: 14rem;
     height: 3rem;
     opacity: 0;
     animation: pageIn 2s forwards;
-    animation-delay: 1.8s;
+    animation-delay: 1s;
+    z-index: 200;
 }
 
 .header .content .bowlary h1 {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(asset/laut.jpg);
+    background-size: 100vw 149.5vh;
+    background-position: -120px -179.5px;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .header .content .pitch-deck text {
     text-transform: uppercase;
     font-size: 10rem;
     animation: stroke 5s infinite alternate;
-    animation-delay: 2.5s;
+    animation-delay: 1s;
 }
 
 @keyframes stroke {
@@ -322,21 +458,26 @@ p {
         stroke-dasharray: 0 50%;
         fill: none;
     }
+
     70% {
         stroke: white;
     }
+
     80% {
         stroke: white;
         stroke-width: 3;
         fill: none;
     }
-    90% {
+
+    85% {
         stroke: white;
         stroke-width: 3;
         stroke-dashoffset: -25%;
-        stroke-dasharray:50% 0;
+        stroke-dasharray: 50% 0;
         fill: rgba(255, 255, 255, 0);
     }
+
+    90%,
     100% {
         stroke: white;
         fill: rgba(255, 255, 255, 1);
@@ -345,38 +486,39 @@ p {
 }
 
 .header .content .image {
-    aspect-ratio: 1/1;
-    width: 18em;
+    width: 100%;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     opacity: 0;
     animation: pageIn 2s forwards;
-    animation-delay: 1.8s;
+    animation-delay: .1s;
+    overflow: hidden;
 }
 
 .header .content .image img {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
-    overflow: hidden;
-    border-radius: 100%;
+
 }
 
 .header .content .image .effect {
-    position: absolute; /* Membuatnya berada di atas video */
-    top: 0; /* Menempatkan di bagian atas */
-    left: 0; /* Menempatkan di bagian kiri */
-    right: 0; /* Menempatkan di bagian kanan */
-    bottom: 0; /* Menempatkan di bagian bawah */
-    display: flex; /* Menggunakan flexbox untuk penataan */
-    justify-content: center; /* Menyelaraskan konten secara horizontal */
-    align-items: center; /* Menyelaraskan konten secara vertikal */
-    color: white; /* Warna teks */
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 45%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 
@@ -417,10 +559,14 @@ p {
     width: 18em;
     aspect-ratio: 1/1;
     position: absolute;
-    display: flex; /* Menggunakan flexbox untuk penataan */
-    justify-content: center; /* Menyelaraskan konten secara horizontal */
-    align-items: center; /* Menyelaraskan konten secara vertikal */
-    color: white; /* Warna teks */
+    display: flex;
+    /* Menggunakan flexbox untuk penataan */
+    justify-content: center;
+    /* Menyelaraskan konten secara horizontal */
+    align-items: center;
+    /* Menyelaraskan konten secara vertikal */
+    color: white;
+    /* Warna teks */
     background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
 }
 
@@ -468,7 +614,7 @@ p {
     align-items: center;
 }
 
-.content-2 .visi-misi-content h2{
+.content-2 .visi-misi-content h2 {
     text-align: center;
     padding: .5em;
     font-size: 24px;
@@ -505,18 +651,22 @@ p {
 
 .content-2 .misi ul li {
     flex: 1 1 50%;
-    box-sizing: border-box; /* Menghitung padding dan border ke dalam ukuran elemen */
+    box-sizing: border-box;
+    /* Menghitung padding dan border ke dalam ukuran elemen */
     padding: 10px;
     font-size: .9em;
-    list-style-type: none; /* Hilangkan bullet asli */
+    list-style-type: none;
+    /* Hilangkan bullet asli */
     position: relative;
 }
 
 .content-2 .misi ul li::before {
-    content: "•";            /* Custom bullet */
+    content: "•";
+    /* Custom bullet */
     position: absolute;
     top: .15em;
-    left: -.5em;                 /* Letak bullet */
+    left: -.5em;
+    /* Letak bullet */
     font-size: 1.5em;
 }
 
@@ -564,12 +714,14 @@ p {
 
 .produk-container .bmc-cihuy .bmc {
     background: #141414;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek melayang */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow untuk efek melayang */
     width: auto;
     height: 100%;
     margin: 1em .5em 1em 0;
     border-radius: 1.4em;
-    box-sizing: border-box; /* Pastikan box-sizing di sini */
+    box-sizing: border-box;
+    /* Pastikan box-sizing di sini */
     max-height: 39em;
     padding: 1.5em;
     display: flex;
@@ -599,7 +751,8 @@ p {
     break-inside: avoid;
 }
 
-.foto-container video, .foto-container img {
+.foto-container video,
+.foto-container img {
     max-width: 100%;
     border-radius: 1em;
     object-fit: cover;
@@ -642,7 +795,8 @@ p {
 }
 
 .slider-indicator .item.active {
-    background: #fff; /* Warna aktif */
+    background: #fff;
+    /* Warna aktif */
 }
 
 .produk-container .bmc-cihuy .bmc .img {
@@ -684,7 +838,8 @@ p {
     cursor: default;
     margin: .5em 0 .5em .5em;
     background: #141414;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek melayang */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow untuk efek melayang */
     border-radius: 1em;
 }
 
@@ -844,9 +999,12 @@ p {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 75%);
-    pointer-events: none; /* Ini supaya layer tidak menghalangi interaksi dengan gambar */
-    opacity: 0; /* Mulai dari transparan */
-    transition: opacity 0.2s ease-in-out; /* Menambahkan transisi hanya pada opacity */
+    pointer-events: none;
+    /* Ini supaya layer tidak menghalangi interaksi dengan gambar */
+    opacity: 0;
+    /* Mulai dari transparan */
+    transition: opacity 0.2s ease-in-out;
+    /* Menambahkan transisi hanya pada opacity */
 }
 
 .kartu-kontainer .kartu:hover::after {
@@ -863,9 +1021,12 @@ p {
 }
 
 .kartu-kontainer .kartu .kartu-nama {
-    position: absolute; /* Menempatkan h5 di atas gambar */
-    bottom: 10px; /* Jarak dari bawah gambar */
-    color: transparent; /* Warna teks, bisa disesuaikan */
+    position: absolute;
+    /* Menempatkan h5 di atas gambar */
+    bottom: 10px;
+    /* Jarak dari bawah gambar */
+    color: transparent;
+    /* Warna teks, bisa disesuaikan */
     width: 20em;
     height: auto;
     z-index: 100;
@@ -967,7 +1128,8 @@ p {
     width: 20%;
     height: 100%;
     background: #141414;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -981,7 +1143,8 @@ p {
 .bmc-activities {
     height: 49.75%;
     background: #141414;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -995,7 +1158,8 @@ p {
 .bmc-resource {
     height: 49.75%;
     background: #141414;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border tipis transparan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1305,19 +1469,22 @@ p {
 }
 
 .popup {
-    display: none; /* Mulai dalam keadaan tersembunyi */
+    display: none;
+    /* Mulai dalam keadaan tersembunyi */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Overlay */
     justify-content: center;
     align-items: center;
 }
 
 .popup.opened {
-    display: flex; /* Tampilkan saat dibuka */
+    display: flex;
+    /* Tampilkan saat dibuka */
 }
 
 .popup-content {
@@ -1335,7 +1502,8 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Overlay */
     z-index: 800;
 }
 
