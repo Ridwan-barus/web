@@ -7,10 +7,22 @@ html,
 body {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
     font-family: "Inter", sans-serif;
+}
+
+:root {
+    --base-clr: #f9f5ea;
+    --case-clr: #292827;
+    --dominant-clr: #28B463;
+    --complement-clr: #ff7a0d;
+    --accent-clr: #FFC107;
+    --clr-2: #1E6F5C;
+    --clr-3: #FFEB3B;
+    --transparent: #00000000;
 }
 
 h1,
@@ -38,7 +50,8 @@ p {
 }
 
 .base-layer {
-    background: #000000;
+    background: var(--base-clr);
+    color: var(--case-clr);
 }
 
 
@@ -50,7 +63,6 @@ p {
 /* navbar */
 .navbar-container {
     background-color: transparent;
-    color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -95,9 +107,7 @@ p {
 
 .li-navbar {
     padding: 10px 20px;
-    /* Tambah padding untuk membuat spasi di dalam elemen */
     text-align: center;
-    /* Mengatur teks di tengah secara horizontal */
     margin: 5px;
 }
 
@@ -197,6 +207,33 @@ p {
 
 
 
+
+
+/* new preload animation */
+/* .new-loader {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+}
+
+.new-loader .blob {
+    content: "";
+    width: 100px;
+    height: 100px;
+} */
+
+
+
+
+
+
+
+
+
+
+
 /* preload animation */
 @property --gradient-angle {
     syntax: "<angle>";
@@ -204,17 +241,10 @@ p {
     inherits: false;
 }
 
-:root {
-    --base-clr: #fff;
-    --clr-1: #833ab4;
-    --clr-2: #fd1d1d;
-    --clr-3: #fcb045;
-}
-
 .loader {
     width: 100%;
     height: 100vh;
-    background: #fff;
+    background: var(--base-clr);
     position: fixed;
     top: 0;
     left: 0;
@@ -239,11 +269,11 @@ p {
     z-index: -1;
     background: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-1),
+        var(--dominant-clr),
         var(--clr-2),
         var(--clr-3),
         var(--clr-2),
-        var(--clr-1));
+        var(--dominant-clr));
     border-radius: inherit;
     animation: rotation 2s linear infinite;
 }
@@ -265,9 +295,9 @@ p {
 }
 
 .loading-visual .loaded {
-    width: 25px; /* Tentukan ukuran sesuai keinginan */
-    height: 25px; /* Tentukan ukuran sesuai keinginan */
-    background: #000; /* Warna latar belakang sebagai contoh */
+    width: 25px;
+    height: 25px;
+    background: var(--dominant-clr);
     border-radius: 50%;
     transform: translateY(50px);
     animation: transform 1s alternate forwards;
@@ -301,9 +331,6 @@ p {
 
 
 
-
-
-
 /* scene */
 .scene-2 {
     position: fixed;
@@ -315,9 +342,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    /*background: #fff;*/
     animation: scene 1s alternate forwards;
-    /*animation-delay: .8s;*/
     z-index: 750;
     display: none;
     opacity: 0;
@@ -327,13 +352,12 @@ p {
     position: absolute;
     width: 25px;
     height: 25px;
-    background: #000;
-    border: 2px solid #fff;
+    background: transparent;
+    border: 2px solid var(---dominant-clr);
     border-radius: 50%;
     animation: circle 1.3s forwards;
-    /*animation-delay: 5s;*/
     scale: 1;
-    box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+    box-shadow: 0 0 2px var(--dominant-clr), 0 0 5px var(--dominant-clr), 0 0 5px var(--dominant-clr), 0 0 5px var(--dominant-clr), 0 0 5px var(--dominant-clr);
     z-index: 800;
 }
 
@@ -411,7 +435,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-230%, 30%);
-    background: white;
+    background: var(--accent-clr);
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -452,35 +476,29 @@ p {
 
 @keyframes stroke {
     0% {
-        stroke: white;
+        stroke: var(--accent-clr);
         stroke-width: 0;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 50%;
         fill: none;
     }
 
-    70% {
-        stroke: white;
-    }
-
     80% {
-        stroke: white;
         stroke-width: 3;
         fill: none;
     }
 
     85% {
-        stroke: white;
         stroke-width: 3;
         stroke-dashoffset: -25%;
         stroke-dasharray: 50% 0;
-        fill: rgba(255, 255, 255, 0);
+        fill: var(--transparent);
     }
 
     90%,
     100% {
-        stroke: white;
-        fill: rgba(255, 255, 255, 1);
+        stroke: var(--accent-clr);
+        fill: var(--accent-clr);
         stroke-width: 3;
     }
 }
@@ -518,7 +536,7 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, var(--base-clr) 100%);
 }
 
 
@@ -547,10 +565,26 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
+    animation: fly 2s infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .content-1 .image img {
-    object-fit: coover;
+    object-fit: cover;
     overflow: hidden;
     border-radius: 100%;
 }
@@ -560,32 +594,27 @@ p {
     aspect-ratio: 1/1;
     position: absolute;
     display: flex;
-    /* Menggunakan flexbox untuk penataan */
     justify-content: center;
-    /* Menyelaraskan konten secara horizontal */
     align-items: center;
-    /* Menyelaraskan konten secara vertikal */
-    color: white;
-    /* Warna teks */
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 40%, var(--base-clr) 70%);
 }
 
 .content-1 .bussiness-background {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #F8F8F8;
     padding: 0 7rem;
 }
 
 .content-1 .bussiness-background h2 {
-    margin-bottom: .25em;
+    margin-bottom: .75em;
     font-size: 24px;
     font-weight: 500;
 }
 
 .content-1 .bussiness-background .text p {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 400;
     line-height: 1.5;
     margin: 0 0 1em 0;
 }
@@ -606,8 +635,6 @@ p {
 
 .content-2 .visi-misi-content {
     border-radius: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -627,8 +654,14 @@ p {
     text-align: center;
 }
 
+.content-2 .visi h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .content-2 .visi p {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 400;
     line-height: 1.5;
     margin: 0 5em;
 }
@@ -641,6 +674,8 @@ p {
 }
 
 .content-2 .misi h3 {
+    font-size: 18px;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -652,21 +687,19 @@ p {
 .content-2 .misi ul li {
     flex: 1 1 50%;
     box-sizing: border-box;
-    /* Menghitung padding dan border ke dalam ukuran elemen */
     padding: 10px;
-    font-size: .9em;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
     list-style-type: none;
-    /* Hilangkan bullet asli */
     position: relative;
 }
 
 .content-2 .misi ul li::before {
     content: "•";
-    /* Custom bullet */
     position: absolute;
     top: .15em;
     left: -.5em;
-    /* Letak bullet */
     font-size: 1.5em;
 }
 
@@ -686,13 +719,11 @@ p {
 
 /* dokumentasi */
 .documentation h2 {
-    color: #818181;
     font-size: 1.5em;
     font-weight: 500;
 }
 
 .produk .description h2 {
-    color: #818181;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -713,15 +744,13 @@ p {
 }
 
 .produk-container .bmc-cihuy .bmc {
-    background: #141414;
+    background: var(--accent-clr);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Shadow untuk efek melayang */
     width: auto;
     height: 100%;
     margin: 1em .5em 1em 0;
     border-radius: 1.4em;
     box-sizing: border-box;
-    /* Pastikan box-sizing di sini */
     max-height: 39em;
     padding: 1.5em;
     display: flex;
@@ -770,7 +799,6 @@ p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #fff;
 }
 
 .slider .next-button:first-of-type {
@@ -796,7 +824,6 @@ p {
 
 .slider-indicator .item.active {
     background: #fff;
-    /* Warna aktif */
 }
 
 .produk-container .bmc-cihuy .bmc .img {
@@ -837,9 +864,8 @@ p {
     display: flex;
     cursor: default;
     margin: .5em 0 .5em .5em;
-    background: #141414;
+    background: var(--accent-clr);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Shadow untuk efek melayang */
     border-radius: 1em;
 }
 
@@ -869,7 +895,6 @@ p {
     width: 65%;
     display: flex;
     flex-direction: column;
-    color: #fff;
 }
 
 .produk-texts .desc {
@@ -967,7 +992,6 @@ p {
     justify-content: center;
     align-items: center;
     margin: 1em 7em 1em 7em;
-    color: #818181;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -1000,11 +1024,8 @@ p {
     height: 100%;
     background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 75%);
     pointer-events: none;
-    /* Ini supaya layer tidak menghalangi interaksi dengan gambar */
     opacity: 0;
-    /* Mulai dari transparan */
     transition: opacity 0.2s ease-in-out;
-    /* Menambahkan transisi hanya pada opacity */
 }
 
 .kartu-kontainer .kartu:hover::after {
@@ -1022,11 +1043,8 @@ p {
 
 .kartu-kontainer .kartu .kartu-nama {
     position: absolute;
-    /* Menempatkan h5 di atas gambar */
     bottom: 10px;
-    /* Jarak dari bawah gambar */
     color: transparent;
-    /* Warna teks, bisa disesuaikan */
     width: 20em;
     height: auto;
     z-index: 100;
@@ -1039,7 +1057,7 @@ p {
 }
 
 .kartu-kontainer .kartu:hover .kartu-nama {
-    color: white;
+    color: white; /* teks hover kartu nama */
 }
 
 .kartu-nama .social {
@@ -1083,7 +1101,6 @@ p {
     height: auto;
     margin-top: 2em;
     margin-bottom: 2em;
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1129,7 +1146,6 @@ p {
     height: 100%;
     background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1144,7 +1160,6 @@ p {
     height: 49.75%;
     background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1159,7 +1174,6 @@ p {
     height: 49.75%;
     background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Border tipis transparan */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1265,7 +1279,6 @@ p {
     justify-content: center;
     align-items: center;
     margin: .5em;
-    color: #fff;
     font-size: 1.5em;
     font-weight: 500;
     padding-top: 1.5em;
@@ -1283,7 +1296,6 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 1em 0 1em 0;
     padding: .5em 1em .5em 1em;
-    color: #ffffff;
 }
 
 .bmc-container .line1 {
@@ -1426,7 +1438,6 @@ p {
     background: #141414;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
-    color: #fff;
 }
 
 .closure h2 {
@@ -1450,7 +1461,7 @@ p {
     justify-content: center;
     display: flex;
     align-items: center;
-    margin: 1em;
+    padding: 1em;
 }
 
 .gif video {
