@@ -638,7 +638,7 @@
         window.onscroll = function() { stickyNavbar() };
 
         var navbar = document.getElementById("navbar");
-        var menuBtn = document.getElementById("menu-btn");
+        // var menuBtn = document.getElementById("menu-btn");
         var sticky = navbar.offsetTop;
         var maxScroll = 500;  // Jumlah jarak scroll sebelum mencapai opacity penuh ///
 
@@ -647,18 +647,18 @@
                 navbar.classList.add("sticky");
 
                 // Hitung opacity berdasarkan jarak scroll
-                //var scrollY = window.pageYOffset - sticky;
-                //var opacity = Math.min(scrollY / maxScroll, 1);  // Nilai opacity 0-1
-                //var shadow = Math.min(scrollY / maxScroll, 0.1);
+                var scrollY = window.pageYOffset - sticky;
+                var opacity = Math.min(scrollY / maxScroll, 1);  // Nilai opacity 0-1
+                var shadow = Math.min(scrollY / maxScroll, 0.1);
 
-                // Ubah warna background dengan opacity bertahap
-                //navbar.style.backgroundColor = `rgba(20, 20, 20, ${opacity})`;
-                //navbar.style.boxShadow = `0 4px 8px rgba(0, 0, 0, ${shadow})`;
+                //Ubah warna background dengan opacity bertahap
+                navbar.style.backgroundColor = `rgba(249, 245, 234, ${opacity})`;
+                navbar.style.boxShadow = `0 1px 4px rgba(0, 0, 0, ${shadow})`;
 
             } else {
                 navbar.classList.remove("sticky");
-                //navbar.style.backgroundColor = "rgba(20, 20, 20, 0)";
-                //navbar.style.boxShadow = "rgba(0, 0, 0, 0)";
+                navbar.style.backgroundColor = "rgba(249, 245, 234, 0)";
+                navbar.style.boxShadow = "rgba(0, 0, 0, 0)";
             }
         }
         </script>
