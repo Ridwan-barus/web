@@ -193,13 +193,165 @@ p {
     display: none;
 }
 
-.loaded {
+.preweb {
+    display: none;
+}
+
+/* .loaded {
     display: none;
 }
 
 .scene-2 {
     display: none;
+} */
+
+
+
+@keyframes display {
+    0% {
+        display: none;
+    }
+    100% {
+        display: block;
+    }
 }
+
+
+
+
+.preload-1 {
+    width: 100%;
+    height: 100vh;
+    /* background: var(--netral-clr-1); */
+    position: relative;
+    display: block;
+    animation: hide .1s forwards;
+    animation-delay: 5.2s;
+}
+
+.preload-1 .get-ready {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--netral-clr-1);
+}
+
+.preload-1 .get-ready h1 {
+    margin: .15em;
+}
+
+.preload-1 .get-ready .get {
+    animation: get .75s forwards ease-in-out;
+}
+
+.preload-1 .get-ready .ready {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: get .75s forwards ease-in-out;
+    animation-delay: 0.75s;
+}
+
+@keyframes get {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+
+
+
+.preload-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: var(--text-clr);
+    color: var(--netral-clr-1);
+    animation: preload2 .1s forwards ease-in-out;
+    animation-delay: 1.6s;
+}
+
+.preload-2 .text {
+    transform: translateX(20px);
+    animation: slide2 2.5s forwards ease-out;
+    animation-delay: 1.7s;
+}
+
+
+
+@keyframes preload2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        transform: translateX(20px);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    54% {
+        transform: scale(1);
+    }
+    55% {
+        transform: scale(1.95);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+
+
+
+.preload-3 {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: var(--netral-clr-1);
+    animation: pageDown 1s forwards cubic-bezier(0, 0, 0, 1);
+    animation-delay: 4.2s;
+}
+
+@keyframes pageDown {
+    0% {
+        height: 0%;
+        display: none;
+    }
+    100% {
+        height: 100%;
+        display: block;
+    }
+}
+
 
 
 
@@ -217,14 +369,14 @@ p {
 .loader {
     width: 100%;
     height: 100vh;
-    background: var(--netral-clr-1);
+    /* background: var(--netral-clr-1); */
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 700;
+    /* z-index: 700; */
 }
 
 .loader .loading {
@@ -255,7 +407,7 @@ p {
     filter: blur(.5rem);
 }
 
-.loader .loading-visual {
+/* .loader .loading-visual {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -286,7 +438,7 @@ p {
     100% {
         transform: translateY(0px);
     }
-}
+} */
 
 @keyframes rotation {
     0% {
@@ -305,7 +457,7 @@ p {
 
 
 /* scene */
-.scene-2 {
+/* .scene-2 {
     position: fixed;
     top: 0;
     left: 0;
@@ -370,7 +522,7 @@ p {
     to {
         opacity: 1;
     }
-}
+} */
 
 
 
@@ -379,18 +531,19 @@ p {
 
 
 /* header */
-.header {
+.head {
     width: 100%;
     height: 100vh;
+    background: var(--bold-clr-2);
 }
 
-.header .content {
+.head .content {
     width: 100%;
     height: 100vh;
     display: flex;
 }
 
-.header .content .pitch-deck {
+.head .content .pitch-deck {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -402,7 +555,7 @@ p {
     z-index: 200;
 }
 
-.header .content .bowlary {
+.head .content .bowlary {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -424,7 +577,7 @@ p {
     z-index: 200;
 }
 
-.header .content .bowlary h1 {
+.head .content .bowlary h1 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -440,7 +593,7 @@ p {
     /* color: white; */
 }
 
-.header .content .pitch-deck text {
+.head .content .pitch-deck text {
     text-transform: uppercase;
     font-size: 10rem;
     animation: stroke 5s infinite alternate;
@@ -449,7 +602,7 @@ p {
 
 @keyframes stroke {
     0% {
-        stroke: var(--bold-clr-2);
+        stroke: var(--netral-clr-1);
         stroke-width: 0;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 50%;
@@ -473,14 +626,14 @@ p {
 
     90%,
     100% {
-        stroke: var(--bold-clr-2);
-        fill: var(--bold-clr-2);
+        stroke: var(--netral-clr-1);
+        fill: var(--netral-clr-1);
         stroke-width: 3;
         filter: blur(1px);
     }
 }
 
-.header .content .image {
+.head .content .image {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -494,16 +647,17 @@ p {
     animation: pageIn 2s forwards;
     animation-delay: .1s;
     overflow: hidden;
+    z-index: 1000;
 }
 
-.header .content .image img {
+.head .content .image img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
 
 }
 
-.header .content .image .effect {
+.head .content .image .effect {
     position: absolute;
     top: 0;
     left: 0;
@@ -658,12 +812,13 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background: var(--bold-clr-2); */
+    background: var(--bold-clr-2);
     padding: 4em 0;
     position: relative;
+    color: var(--netral-clr-1);
 }
 
-.base-content-1 img {
+/* .base-content-1 img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -672,13 +827,13 @@ p {
 
 .base-content-1 .img {
     object-fit: cover;
-}
+} */
 
 .base-content-1 h2 {
     font-size: 30px;
     font-weight: 700;
     z-index: 1;
-    color: var(--netral-clr-1);
+    /* color: var(--netral-clr-1); */
 }
 
 .content-1 {
@@ -749,7 +904,7 @@ p {
 .content-1 .header .line {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid var(--text-clr);
+    border-bottom: 2px solid var(--netral-clr-1);
 }
 
 .content-1 h3 {

@@ -11,15 +11,29 @@
     <title>Bowlary</title>
 </head>
 <body>
-    <div class="loader">
-        <div class="loading"></div>
-        <div class="loading-visual"><div class="loaded"></div></div>
+    <div class="preload-1">
+        <div class="loader">
+            <div class="loading"></div>
+            <!-- <div class="loading-visual"><div class="loaded"></div></div> -->
+        </div>
+        <div class="preweb">
+            <div class="get-ready">
+                <h1 class="get">Get</h1>
+                <h1 class="ready">Ready</h1>
+            </div>
+            <div class="preload-2">
+                <div class="text">
+                    <h1>BOWLARY</h1>
+                </div>
+            </div>
+            <div class="preload-3"></div>
+        </div>
     </div>
-    <section class="scene-2">
+    <!-- <section class="scene-2">
         <div class="circle"></div>
-    </section>
+    </section> -->
     <div class = "base-layer">
-        <div class="header">
+        <div class="head">
             <div class="content">
                 <svg class="pitch-deck" viewBox="0 0 1320 300">
                     <text x="50%" y="50%" text-anchor="middle">
@@ -103,7 +117,7 @@
                 </div>
             </div>
             <div class="base-content-1">
-                <img src="asset/Artboard 1.png" class="img">
+                <!-- <img src="asset/Artboard 1.png" class="img"> -->
                 <h2>Problem Solving</h2>
                 <div class="content-1">
                     <div class = "problem">
@@ -553,33 +567,33 @@
                 <video autoplay loop muted src="asset/videoplayback.mp4"></video>
             </div> -->
         </div>
-    </div>
-    <div class = "footer-container">
-        <div class = "footer">
-            <h3>Social</h3>
-            <div class="popup" id="popup">
-                <div class="overlay"></div>
-                <div class="popup-content">
-                    <button type="button" class="btn-close" onclick="closePopup()"><i class="fa-solid fa-xmark fa-lg"></i></button>
-                    <div class="text">
-                        <p>Harap hubungi nomor dibawah ini</p>
-                        <p class="nomor">+62 852 1956 6243</p>
+        <div class = "footer-container">
+            <div class = "footer">
+                <h3>Social</h3>
+                <div class="popup" id="popup">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <button type="button" class="btn-close" onclick="closePopup()"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                        <div class="text">
+                            <p>Harap hubungi nomor dibawah ini</p>
+                            <p class="nomor">+62 852 1956 6243</p>
+                        </div>
+                        <button type="button" class="btn-ok" onclick="closePopup()">OK</button>
                     </div>
-                    <button type="button" class="btn-ok" onclick="closePopup()">OK</button>
                 </div>
+                <button type="submit" class="btn" onclick="openPopup()">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i>
+                </button>
+                <a class ="social-icon" href="https://www.instagram.com/bowlary_/">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </a>
+                <a class ="social-icon" href="https://www.tiktok.com/@bowlary_">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <hr class="line">
+                <div class="div2"></div>
+                <h4 class = "lokasi">Jl. Sapta No 28 RT 3 RW 1 Tebet, Menteng Dalam, Jakarta Selatan</h4>
             </div>
-            <button type="submit" class="btn" onclick="openPopup()">
-                <i class="fa-brands fa-whatsapp fa-lg"></i>
-            </button>
-            <a class ="social-icon" href="https://www.instagram.com/bowlary_/">
-                <i class="fa-brands fa-instagram fa-lg"></i>
-            </a>
-            <a class ="social-icon" href="https://www.tiktok.com/@bowlary_">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <hr class="line">
-            <div class="div2"></div>
-            <h4 class = "lokasi">Jl. Sapta No 28 RT 3 RW 1 Tebet, Menteng Dalam, Jakarta Selatan</h4>
         </div>
     </div>
 
@@ -589,13 +603,21 @@
     <script>
         $(window).on('load', function() {
             
-            $(".loaded").fadeIn(1);
+            //$(".loaded").fadeIn(1);
+            $(".preweb").fadeIn(1);
+            $(".loader").fadeOut(1);
+            $(".preload-1").fadeOut(1);
 
             setTimeout(function() {
-                $(".loader").fadeOut(650);
-                $(".scene-2").fadeIn(1);
+                $(".preweb").fadeOut(1);
+                //$(".preload-1").fadeOut(1);
                 $(".base-layer").fadeIn(1);
-            }, 1000);
+            }, 5200);
+            //setTimeout(function() {
+              //  $(".loader").fadeOut(650);
+                //$(".scene-2").fadeIn(1);
+                //$(".base-layer").fadeIn(1);
+            //}, 1000);
             
 
         });
