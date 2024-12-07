@@ -35,16 +35,17 @@
     <div class = "base-layer">
         <div class="head">
             <div class="content">
+                <img class="foto" src="asset/laut.jpg" alt="">
                 <svg class="pitch-deck" viewBox="0 0 1320 300">
                     <text x="50%" y="50%" text-anchor="middle">
                         PITCH DECK
                     </text>
                 </svg>
                 <div class="bowlary"><h1>BOWLARY</h1></div>
-                <div class="image">
-                    <img src="asset/laut.jpg" alt="">
-                    <div class="effect"></div>
-                </div>
+                <!-- <div class="image">
+                    
+                </div> -->
+                <div class="effect"></div>
             </div>
         </div>
         <div class = "navbar-container" id="navbar">
@@ -268,24 +269,60 @@
                 <div class="content-1-6">
                     <div class="left-container">
                         <div class="item item-l">
-                            <div class="icon">
-                                <i class="fa-solid fa-shop fa-5x"></i>
+                            <div class="content">
+                                <div class="icon">
+                                    <i class="fa-solid fa-shop fa-5x"></i>
+                                </div>
+                                <h3 class="desc">Membuat Ruko</h3>
                             </div>
-                            <h3>Membuat Ruko</h3>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <div class="content-tgl">
+                                    <div class="tgl">
+                                        <h3>11 agustus</h3>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="item item-l">
-                            <div class="icon">
-                                <i class="fa-solid fa-basket-shopping fa-5x"></i>
+                            <div class="content">
+                                <div class="icon">
+                                    <i class="fa-solid fa-basket-shopping fa-5x"></i>
+                                </div>
+                                <h3 class="desc">Menambah Variasi Menu</h3>
                             </div>
-                            <h3>Menambah Variasi Menu</h3>
                         </div>
                     </div>
                     <div class="right-container">
-                        <div class="item item-r">
-                            <div class="icon">
-                                <i class="fa-solid fa-people-group fa-5x"></i>
+                        <div class="item">
+                            <div class="content">
+                                <div class="content-tgl">
+                                    <div class="triangle"></div>
+                                    <div class="tgl">
+                                        <h3>11 agustus</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <h3>Membuat Franchise</h3>
+                        </div>
+                        <div class="item item-r">
+                            <div class="content">
+                                <div class="icon">
+                                    <i class="fa-solid fa-people-group fa-5x"></i>
+                                </div>
+                                <h3 class="desc">Membuat Franchise</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <div class="content-tgl">
+                                    <div class="triangle"></div>
+                                    <div class="tgl">
+                                        <h3>11 agustus</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -600,28 +637,23 @@
 
 
     <!-- jQuery Loader -->
-    <script>
+    <!-- <script>
         $(window).on('load', function() {
             
             //$(".loaded").fadeIn(1);
             $(".preweb").fadeIn(1);
             $(".loader").fadeOut(1);
-            $(".preload-1").fadeOut(1);
+            //$(".preload-1").fadeOut(1);
 
             setTimeout(function() {
-                $(".preweb").fadeOut(1);
-                //$(".preload-1").fadeOut(1);
+                //$(".preweb").fadeOut(1);
+                $(".preload-1").fadeOut(1);
                 $(".base-layer").fadeIn(1);
             }, 5200);
-            //setTimeout(function() {
-              //  $(".loader").fadeOut(650);
-                //$(".scene-2").fadeIn(1);
-                //$(".base-layer").fadeIn(1);
-            //}, 1000);
             
 
         });
-    </script>
+    </script> -->
 
 
     <!-- Java Script -->
@@ -635,14 +667,14 @@
 
 
         // like system
-        const likedIcon = document.querySelectorAll(".like-icon");
+        // const likedIcon = document.querySelectorAll(".like-icon");
 
 
-        likedIcon.forEach(icon => {
-            icon.addEventListener("click", function() {
-                icon.classList.toggle("liked");
-            });
-        });
+        // likedIcon.forEach(icon => {
+        //     icon.addEventListener("click", function() {
+        //         icon.classList.toggle("liked");
+        //     });
+        // });
             
 
 
@@ -669,51 +701,51 @@
 
 
         // slide documentation system
-        let currentIndex = 0;
-        const figure = document.querySelector('.documentation-slider');
-        const slides = document.querySelectorAll('.documentation-slider .slide');
-        const totalSlides = slides.length;
-        const indicators = document.querySelectorAll('.slider-indicator .item');    
+        // let currentIndex = 0;
+        // const figure = document.querySelector('.documentation-slider');
+        // const slides = document.querySelectorAll('.documentation-slider .slide');
+        // const totalSlides = slides.length;
+        // const indicators = document.querySelectorAll('.slider-indicator .item');    
 
-        function updateSlidePosition() {
-            figure.style.transform = `translateX(-${currentIndex * 20}%)`;
-            updateIndicators();
-        }
+        // function updateSlidePosition() {
+        //     figure.style.transform = `translateX(-${currentIndex * 20}%)`;
+        //     updateIndicators();
+        // }
 
-        function updateIndicators() {
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentIndex);
-            });
-        }
+        // function updateIndicators() {
+        //     indicators.forEach((indicator, index) => {
+        //         indicator.classList.toggle('active', index === currentIndex);
+        //     });
+        // }
 
-        document.querySelector('.next-button:last-of-type').addEventListener('click', () => {
-            if(currentIndex < totalSlides - 1) {
-                currentIndex++;
-            }
-            else {
-                currentIndex = 0;
-            }
-            updateSlidePosition();
-        });
+        // document.querySelector('.next-button:last-of-type').addEventListener('click', () => {
+        //     if(currentIndex < totalSlides - 1) {
+        //         currentIndex++;
+        //     }
+        //     else {
+        //         currentIndex = 0;
+        //     }
+        //     updateSlidePosition();
+        // });
 
-        document.querySelector('.next-button:first-of-type').addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalSlides - 1; // Loop kembali ke slide terakhir
-            }
-            updateSlidePosition();
-        });
+        // document.querySelector('.next-button:first-of-type').addEventListener('click', () => {
+        //     if (currentIndex > 0) {
+        //         currentIndex--;
+        //     } else {
+        //         currentIndex = totalSlides - 1; // Loop kembali ke slide terakhir
+        //     }
+        //     updateSlidePosition();
+        // });
 
-        // Event listener untuk indikator slider
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentIndex = index;
-                updateSlidePosition();
-            });
-        });
+        // // Event listener untuk indikator slider
+        // indicators.forEach((indicator, index) => {
+        //     indicator.addEventListener('click', () => {
+        //         currentIndex = index;
+        //         updateSlidePosition();
+        //     });
+        // });
 
-        updateSlidePosition(); // Inisialisasi posisi pertama
+        // updateSlidePosition(); // Inisialisasi posisi pertama
 
 
         // sticky navbar system
