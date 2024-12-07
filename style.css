@@ -189,13 +189,13 @@ p {
 
 
 /* loader animation */
-/* .base-layer {
+.base-layer {
     display: none;
 }
 
 .preweb {
     display: none;
-} */
+}
 
 
 
@@ -1017,7 +1017,6 @@ p {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 4em 0;
-    background-color: blueviolet;
 }
 
 .base-content-1-3 h2 {
@@ -1038,10 +1037,11 @@ p {
 .content-1-3 .item {
     display: flex;
     flex-direction: row;
+    padding: 0 .5em;
 }
 
 .content-1-3 .item .icon {
-    width: 100px;
+    width: 30%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -1057,12 +1057,12 @@ p {
 }
 
 .content-1-3 .item .value {
-    width: 400px;
+    width: 100%;
     height: 200px;
 }
 
 .content-1-3 .item .revenue {
-    width: 400px;
+    width: 100%;
     height: 200px;
 }
 
@@ -1541,6 +1541,14 @@ th {
     text-decoration: none;
     opacity: 0;
     transition: .25s ease-in-out;
+}
+
+.kartu-nama .social a i {
+    transition: .25s ease-in-out;
+}
+
+.kartu-nama .social a i:hover {
+    color: var(--contrast-clr);
 }
 
 .kartu:hover .kartu-nama .social a {
