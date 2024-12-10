@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
     <title>Bowlary</title>
 </head>
 <body>
@@ -128,8 +129,10 @@
                             <hr class="line">
                         </div>
                         <ul class="text">
-                            <li>Masalah Waktu</li>
-                            <li>Masalah Harga</li>
+                            <li>Jarak Rumah</li>
+                            <li>Price List Terlalu Murah</li>
+                            <li>Pemasaran</li>
+                            <li>Rasa Produk yang Kurang</li>
                         </ul>
                     </div>
                     <div class="solution">
@@ -139,8 +142,10 @@
                             <hr class="line">
                         </div>
                         <ul class="text">
-                            <li>Menentukan waktu yang tepat</li>
-                            <li>Diskusi dengan satu kelompok</li>
+                            <li>Menentukan Titik Kumpul</li>
+                            <li>Mengambil Margin Kecil</li>
+                            <li>Melakukan Promosi di Sosial Media</li>
+                            <li>Melakukan Riset dan Percobaan Berkali-kali</li>
                         </ul>
                     </div>
                 </div>
@@ -176,9 +181,9 @@
                             <h3>Go To Market Strategy</h3>
                         </div>
                         <ul class="text">
-                            <li>Menargetkan segmen pasar yang mencari makanan cepat saji, sehat, lezat dan unik.</li>
-                            <li>Harga kaki lima rasa bintang lima.</li>
-                            <li>Promosi lewat sosial media.</li>
+                            <li>Menawarkan Produk ke Relasi</li>
+                            <li>Promosi Lewat Sosial Media</li>
+                            <li>Free Ongkir Tergantung Jarak</li>
                         </ul>
                     </div>
                 </div>
@@ -193,10 +198,10 @@
                         <div class="value">
                             <h3>Value Proportions</h3>
                             <ul class="text">
-                                <li>Praktis dan Sehat : Dibuat menggunakan bahan yang fresh.</li>
-                                <li>Harga yang Terjangkau : Harga kaki lima, rasa bintang lima.</li>
-                                <li>Kemasan Ramah Lingkungan : Menggunakan kemasan yang dapat di daur ulang.</li>
-                                <li>Cepat dan Nyaman : Cocok untuk orang sibuk dan ingin makan cepat tanpa mengorbankan kualitas.</li>
+                                <li>Ayam Kami Unik</li>
+                                <li>Harga Kaki Lima Rasa Bintang Lima</li>
+                                <li>Kemasan Ramah Lingkungan</li>
+                                <li>Cepat dan Lezat</li>
                             </ul>
                         </div>
                     </div>
@@ -207,8 +212,9 @@
                         <div class="revenue">
                             <h3>Revenue Streams</h3>
                             <ul class="text">
-                                <li>Penjualan Produk Makanan : Pendapatan utama dari ricebowl dan bakmi.</li>
-                                <li>Penjualan Produk Minuman : Menjual minuman sebagai pelengkap.</li>
+                                <li>Penjualan dari Pre Order 1 dan 2</li>
+                                <li>Cashless dan COD</li>
+                                <li>Penjualan dari Event Entrepreneur Fair</li>
                             </ul>
                         </div>
                     </div>
@@ -223,7 +229,7 @@
                             <div class="icon">
                                 <i class="fa-solid fa-chart-line fa-3x"></i>
                             </div>
-                            <h3>Grafik PO Naik</h3>
+                            <h3>Penjualan Growth</h3>
                         </div>
                         <div class="item">
                             <div class="icon">
@@ -231,14 +237,16 @@
                             </div>
                             <h3>Respon Positif dari Pembeli</h3>
                         </div>
-                        <div class="item">
+                        <!-- <div class="item">
                             <div class="icon">
                                 <i class="fa-solid fa-arrows-to-dot fa-3x"></i>
                             </div>
                             <h3>Melewati Target Perkiraan</h3>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
+                <h2>Grafik Penjualan</h2>
+                <div id="grafik"></div>
             </div>
             <div class="base-content-1-5">
                 <h2>Competitor</h2>
@@ -248,7 +256,7 @@
                             <tr>
                                 <th></th>
                                 <th>Bowlary</th>
-                                <th>Other Product</th>
+                                <th>Bakmi Warung Samping Kampus</th>
                             </tr>
                             <tr>
                                 <th>Harga Lebih Murah</th>
@@ -257,6 +265,11 @@
                             </tr>
                             <tr>
                                 <th>Unik</th>
+                                <th><i class="fa-solid fa-circle-check fa-2x"></i></th>
+                                <th><i class="fa-solid fa-circle-xmark fa-2x"></i></th>
+                            </tr>
+                            <tr>
+                                <th>Banyak Tipe Order</th>
                                 <th><i class="fa-solid fa-circle-check fa-2x"></i></th>
                                 <th><i class="fa-solid fa-circle-xmark fa-2x"></i></th>
                             </tr>
@@ -280,7 +293,7 @@
                             <div class="content">
                                 <div class="content-tgl">
                                     <div class="tgl">
-                                        <h3>11 agustus</h3>
+                                        <h3>Bulan Ke - 2</h3>
                                     </div>
                                     <div class="triangle"></div>
                                 </div>
@@ -289,9 +302,9 @@
                         <div class="item item-l">
                             <div class="content">
                                 <div class="icon">
-                                    <i class="fa-solid fa-basket-shopping fa-5x"></i>
+                                    <i class="fa-solid fa-people-group fa-5x"></i>
                                 </div>
-                                <h3 class="desc">Menambah Variasi Menu</h3>
+                                <h3 class="desc">Membuat Franchise</h3>
                             </div>
                         </div>
                     </div>
@@ -301,7 +314,7 @@
                                 <div class="content-tgl">
                                     <div class="triangle"></div>
                                     <div class="tgl">
-                                        <h3>11 agustus</h3>
+                                        <h3>Bulan Ke - 1</h3>
                                     </div>
                                 </div>
                             </div>
@@ -309,9 +322,9 @@
                         <div class="item item-r">
                             <div class="content">
                                 <div class="icon">
-                                    <i class="fa-solid fa-people-group fa-5x"></i>
+                                    <i class="fa-solid fa-basket-shopping fa-5x"></i>
                                 </div>
-                                <h3 class="desc">Membuat Franchise</h3>
+                                <h3 class="desc">Menambah Variasi Menu</h3>
                             </div>
                         </div>
                         <div class="item">
@@ -319,7 +332,7 @@
                                 <div class="content-tgl">
                                     <div class="triangle"></div>
                                     <div class="tgl">
-                                        <h3>11 agustus</h3>
+                                        <h3>Bulan Ke - 3</h3>
                                     </div>
                                 </div>
                             </div>
@@ -334,13 +347,13 @@
                         <div class="icon">
                             <i class="fa-solid fa-comment fa-3x"></i>
                         </div>
-                        <h3>Feedback dari Pelanggan</h3>
+                        <h3>Feedback dari Konsumen</h3>
                     </div>
                     <div class="item">
                         <div class="icon">
                             <i class="fa-solid fa-address-book fa-3x"></i>
                         </div>
-                        <h3>Mentor Bisnis</h3>
+                        <h3>Orang Tua</h3>
                     </div>
                 </div>
             </div>
@@ -658,6 +671,76 @@
 
     <!-- Java Script -->
     <script>
+        var chart = new ej.charts.Chart({
+            //Initializing Primary X Axis
+            primaryXAxis: {
+                valueType: 'Category',
+                title: 'Countries',
+            },
+            //Initializing Primary Y Axis
+             primaryYAxis: {
+                title: 'Medals in number'
+            },
+ 
+            //Initializing Chart Series
+            series: [
+                {
+                    type: 'Column',
+                    dataSource: [
+                        { country: "USA", medal: 50 },
+                        { country: "China", medal: 40 },
+                        { country: "Japan", medal: 70 },
+                        { country: "Australia", medal: 60 },
+                        { country: "France", medal: 30 },
+                    ],
+                    xName: 'country',
+                    yName: 'medal',
+                }
+            ],
+        });
+        chart.appendTo('#grafik');
+
+        var chart = new ej.charts.Chart({
+            title: 'Olympic Medals'
+        });
+        chart.appendTo('#grafik');
+
+        var chart = new ej.charts.Chart({
+            series: [
+                
+                {
+                    marker: {
+                         visible: true,
+                   }
+                }
+            ],
+        });
+        chart.appendTo('#grafik');
+
+        var chart = new ej.charts.Chart({
+            series: [
+                {
+                    marker: {
+                         dataLabel: { visible: true }
+ 
+                   }
+                }
+            ],
+        });
+        chart.appendTo('#grafik');
+
+        var chart = new ej.charts.Chart({
+            tooltip: {enable: true},
+        });
+        chart.appendTo('#grafik');
+
+
+
+
+        
+
+
+
         // refresh go back to top
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
