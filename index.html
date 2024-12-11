@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    <!-- <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Bowlary</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
     <div class = "base-layer">
         <div class="head">
             <div class="content">
-                <img class="foto" src="asset/laut.jpg" alt="">
+                <img class="foto" src="asset/doc4.jpg" alt="">
                 <svg class="pitch-deck" viewBox="0 0 1320 300">
                     <text x="50%" y="50%" text-anchor="middle">
                         PITCH DECK
@@ -75,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class = "container">
+        <div class = "rectangle">
             <div class="base-content-0-9">
                 <div class="item item-1">
                     <div class="foto">
@@ -224,7 +225,6 @@
                 <h2>Achievement</h2>
                 <div class="content-1-4">
                     <div class="achievement">
-                        <!-- <hr class="line"> -->
                         <div class="item">
                             <div class="icon">
                                 <i class="fa-solid fa-chart-line fa-3x"></i>
@@ -246,7 +246,8 @@
                     </div>
                 </div>
                 <h2>Grafik Penjualan</h2>
-                <div id="grafik"></div>
+                <!-- <div id="container"></div> -->
+                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
             <div class="base-content-1-5">
                 <h2>Competitor</h2>
@@ -455,167 +456,6 @@
                     <div class="box"><img src="asset/po9.jpg"></div>
                 </div>
             </div>
-            <!-- <div class="content-2">
-                <div class="visi-misi-content">
-                    <h2>Vision and Missions Statement</h2>
-                    <div class = "visi">
-                        <h3>Visi</h3>
-                        <p>Menjadi merek terkemuka di industri kuliner yang menggabungkan cita rasa otentik dibungkus dengan penyajian yang modern dalam setiap makanan yang disajikan.</p>
-                    </div>
-                    <div class = "misi">
-                        <h3>Misi</h3>
-                        <ul>
-                            <li class = "misi-text">Menyediakan hidangan ricebowl dan bakmi yang lezat, sehat dan cepat untuk semua kalangan, dengan mengutamakan kualitas dan kepuasan pelanggan.</li>
-                            <li class = "misi-text">Menciptakan menu baru dengan cita rasa tradisional dan modern agar menarik pasar.</li>
-                            <li class = "misi-text">Membangun interaksi dengan pelanggan melalui layanan yang ramah, responsif, dan mendengarkan masukan untuk terus meningkatkan pelayanan.</li>
-                            <li class = "misi-text">Penggunaan bahan baku segar dan berkualitas dalam setiap hidangan, untuk memastikan rasa otentik tetap terjaga.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="content-3">
-                <div class = "produk-container">
-                    <div class="bmc-cihuy">
-                        <div class="documentation">
-                            <h2>Documentation</h2>
-                        </div>
-                        <div class = "bmc">
-                            <div class="bmc-slider">
-                                <div class="documentation-slider">
-                                    <div class="slide">
-                                        <div class="foto-container"><video autoplay loop muted src="asset/cinematic.mp4" class="video"></video></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4"></video></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/po2.mp4"></video></div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><img src="asset/test2.jpg" alt=""></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                    </div>
-                                    <div class="slide">
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><img src="asset/test.jpg" alt=""></div>
-                                        <div class="foto-container"><video autoplay loop muted src="asset/rain.mp4" class="video"></video></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider">
-                                <div class="next-button"><i class="fa-solid fa-chevron-left"></i></div>
-                                <div class="slider-indicator">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                                <div class="next-button"><i class="fa-solid fa-chevron-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "produk">
-                        <div class="description">
-                            <h2>Description</h2>
-                        </div>
-                        <div class = "produks">
-                            <div class = "foto-produk">
-                                <img src="asset/bakmi.jpg" class="img">
-                            </div>
-                            <div class = "produk-texts">
-                                <div class="produk-text">
-                                    <h3>Bakmi Super</h3>
-                                    <div class="line1"></div>
-                                </div>
-                                <div class="desc">
-                                    <h5>Bakmi adalah hidangan mie yang disajikan dengan topping daging ayam, sayuran dan pelengkap lainya.</h5>
-                                    <div class="likes">
-                                        <i class="fa-solid fa-heart like-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "produks">
-                            <div class = "foto-produk">
-                                <img src="asset/ricebowl.jpg" class="img">
-                            </div>
-                            <div class = "produk-texts">
-                                <div class="produk-text">
-                                    <h3>Ricebowl</h3>
-                                    <div class="line2"></div>
-                                </div>
-                                <div class="desc">
-                                    <h5>Ricebowl adalah hidangan nasi dengan ayam ditambah sayuran untuk menjaga keseimbangan gizi.</h5>
-                                    <div class="likes">
-                                        <i class="fa-solid fa-heart like-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "produks">
-                            <div class = "foto-produk">
-                                <img src="asset/nutrisari.jpg" class="img">
-                            </div>
-                            <div class = "produk-texts">
-                                <div class="produk-text">
-                                    <h3>Nutrisari Milky Orange</h3>
-                                    <div class="line3"></div>
-                                </div>
-                                <div class="desc">
-                                    <h5>Nutrisari Milky Orange adalah minuman jeruk yang terasa sedikit asam untuk menciptakan rasa yang unik.</h5>
-                                    <div class="likes">
-                                        <i class="fa-solid fa-heart like-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class = "produks">
-                            <div class = "foto-produk">
-                                <img src="asset/bengbeng.jpg" class="img">
-                            </div>
-                            <div class = "produk-texts">
-                                <div class="produk-text">
-                                    <h3>Ice Beng Beng</h3>
-                                    <div class="line4"></div>
-                                </div>
-                                <div class="desc">
-                                    <h5>Ice Beng Beng adalah minuman coklat yang dicampur dengan rempahan oreo.</h5>
-                                    <div class="likes">
-                                        <i class="fa-solid fa-heart like-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="closure">
-                <h2>Closure</h2>
-                <p>Bisnis makanan dari minuman ini dapat memperoleh keuntungan dengan membuat masyarakat termotivasi untuk mencari makanan dan minuman yang praktis serta untuk menambah mood mereka. </p>
-                <p class = "closure-text-2">Kesimpulan dan tujuan agar produk yang kita pasarkan diterima di kalangan mahasiswa, pekerja kantor, ibu rumah tangga dan siswa siswi SMA/SMK/Sederajat, kita harus membuat produk yang berkualitas dan lezat, yaitu dengan :</p>
-                <ul class = "closure-list">
-                    <li>Membuat produk dengan harga terjangkau dan rasa yang terjamin</li>
-                    <li>Membuat desain yang baru dengan mengikuti zaman sekarang</li>
-                    <li>Memilih dan menentukan wilayah pemasaran yang menguntungkan</li>
-                    <li>Membuat produk menjadi semenarik mungkin</li>
-                </ul>   
-            </div> -->
-            <!-- <div class="gif">
-                <video autoplay loop muted src="asset/videoplayback.mp4"></video>
-            </div> -->
         </div>
         <div class = "footer-container">
             <div class = "footer">
@@ -653,7 +493,6 @@
     <script>
         $(window).on('load', function() {
             
-            //$(".loaded").fadeIn(1);
             $(".preweb").fadeIn(1);
             $(".loader").fadeOut(1);
             //$(".preload-1").fadeOut(1);
@@ -671,69 +510,152 @@
 
     <!-- Java Script -->
     <script>
-        var chart = new ej.charts.Chart({
-            //Initializing Primary X Axis
-            primaryXAxis: {
-                valueType: 'Category',
-                title: 'Countries',
-            },
-            //Initializing Primary Y Axis
-             primaryYAxis: {
-                title: 'Medals in number'
-            },
- 
-            //Initializing Chart Series
-            series: [
-                {
-                    type: 'Column',
-                    dataSource: [
-                        { country: "USA", medal: 50 },
-                        { country: "China", medal: 40 },
-                        { country: "Japan", medal: 70 },
-                        { country: "Australia", medal: 60 },
-                        { country: "France", medal: 30 },
-                    ],
-                    xName: 'country',
-                    yName: 'medal',
+        const xValues = [String('PreOrder 1'),String('PreOrder 2'),String('Entrepreneur Fair')];
+
+        new Chart("myChart", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+                label: "Es Beng Beng",
+              data: [7,8,0],
+              borderColor: "red",
+              fill: false
+            },{
+                label: "Ricebowl",
+              data: [4,4,10],
+              borderColor: "green",
+              fill: false
+            },{
+                label: "Bakmi",
+              data: [14,16,10],
+              borderColor: "blue",
+              fill: false
+            },{
+                label: "Nutrisari",
+              data: [6,9,2],
+              borderColor: "yellow",
+              fill: false
+            }]
+          },
+            options: {
+                scales: {
+                    xAxes: [{
+                      ticks: {
+                        fontColor: "white",  // Warna teks pada sumbu X
+                        fontSize: 14        // Ukuran teks pada sumbu X
+                      }
+                    }],
+                    yAxes: [{
+                      ticks: {
+                        fontColor: "white", // Warna angka pada sumbu Y
+                        fontSize: 14        // Ukuran angka pada sumbu Y
+                      }
+                    }]
+                  },
+                legend: {
+                    display: true,              // Tampilkan legend
+                    labels: {
+                        fontColor: "white",       // Warna teks
+                        fontSize: 16,             // Ukuran teks
+                        borderColor: "black",
+                        borderWidth: 2       // Ketebalan border kotak legenda
+                    }
+                },
+                layout: {
+                    padding: {
+                      left: 10,
+                      right: 10,
+                      top: 10,
+                      bottom: 10
+                    }
+                  },
+                plugins: {
+                    background: {
+                        color: 'rgba(0, 0, 0, 0.8)'  // Set background warna chart area
+                    }
                 }
-            ],
+            }
         });
-        chart.appendTo('#grafik');
-
-        var chart = new ej.charts.Chart({
-            title: 'Olympic Medals'
-        });
-        chart.appendTo('#grafik');
-
-        var chart = new ej.charts.Chart({
-            series: [
+        
+        // function animateChart(chart, seriesIndex, duration) {
+        //     const series = chart.series[seriesIndex];
+        //     const maxValue = series.dataSource.map((data) => data.medal);
+        //     const steps = 60; // Jumlah frame animasi
+        //     let frame = 0;
+        
+        //     function animate() {
+        //         frame++;
+        //         const progress = Math.min(frame / steps, 1);
                 
-                {
-                    marker: {
-                         visible: true,
-                   }
-                }
-            ],
-        });
-        chart.appendTo('#grafik');
+        //         series.dataSource.forEach((data, index) => {
+        //             data.medal = Math.floor(maxValue[index] * progress); 
+        //         });
+        
+        //         chart.refresh(); // Perbarui grafik
+        
+        //         if (progress < 1) {
+        //             requestAnimationFrame(animate); // Ulangi animasi
+        //         }
+        //     }
+        
+        //     animate();
+        // }
+            
 
-        var chart = new ej.charts.Chart({
-            series: [
-                {
-                    marker: {
-                         dataLabel: { visible: true }
+        // var chart = new ej.charts.Chart({
+        //     //Initializing Primary X Axis
+        //     primaryXAxis: {
+        //         valueType: 'Category',
+        //         title: 'Jenis Produk',
+        //     },
+        //     //Initializing Primary Y Axis
+        //      primaryYAxis: {
+        //         title: 'Total Penjualan'
+        //     },
  
-                   }
-                }
-            ],
-        });
-        chart.appendTo('#grafik');
+        //     //Initializing Chart Series
+        //     series: [
+        //         {
+        //             type: 'Column',
+        //             dataSource: [
+        //                 { country: "Pre Order 1", medal: 50 },
+        //                 { country: "Pre Order 2", medal: 40 },
+        //                 { country: "Entrepreneur Fair", medal: 70 },
+        //                 { country: "Australia", medal: 60 },
+        //                 { country: "France", medal: 30 },
+        //             ],
+        //             xName: 'country',
+        //             yName: 'medal',
 
-        var chart = new ej.charts.Chart({
-            tooltip: {enable: true},
-        });
-        chart.appendTo('#grafik');
+        //             marker: {
+        //                 visible: true,
+        //                 dataLabel: {
+        //                     visible: true,  // Menampilkan label data
+        //                     position: 'Top'
+        //                 }
+        //             }
+        //         }
+        //     ],
 
+        //     tooltip: { enable: true },
+        //     legendSettings: { visible: true }
+
+        // });
+        // chart.appendTo('#container');
+
+
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //     if (entry.isIntersecting) {
+        //         entry.target.classList.add('chart-animate');
+        //     }
+        //     });
+        // });
+
+        // // Observasi Elemen Grafik
+        // const chartContainer = document.getElementById('chart-container');
+        // observer.observe(chartContainer);
 
 
 
