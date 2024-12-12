@@ -97,6 +97,7 @@ p {
 .ul-navbar .logo img {
     height: 7vh;
     width: auto;
+    filter: drop-shadow(0 0 .1rem gray);
 }
 
 .ul-navbar .menu-btn {
@@ -122,7 +123,7 @@ p {
 }
 
 .li-navbar button:hover {
-    color: var(--bold-clr-2);
+    color: var(--contrast-clr);
 }
 
 .menu-bar {
@@ -328,7 +329,7 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background: var(--netral-clr-1);
+    background: var(--bold-clr-2);
     animation: pageDown 1s forwards cubic-bezier(0, 0, 0, 1);
     animation-delay: 4.2s;
 }
@@ -534,6 +535,7 @@ p {
     height: 100vh;
     display: flex;
     position: relative;
+    background: var(--bold-clr-2);
 }
 
 .head .content img {
@@ -566,7 +568,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
-    background: var(--bold-clr-2);
+    background: var(--netral-clr-1);
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -587,13 +589,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(asset/doc4.jpg);
+    /* background-image: url(asset/doc4.jpg);
     background-size: 100vw 149.5vh;
     background-position: -500px -179.5px;
-    background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    background-repeat: no-repeat; */
+    /* background-clip: text;
+    -webkit-background-clip: text; */
+    color: var(--bold-clr-2);
     /* color: white; */
 }
 
@@ -606,7 +608,7 @@ p {
 
 @keyframes stroke {
     0% {
-        stroke: var(--bold-clr-2);
+        stroke: var(--netral-clr-1);
         stroke-width: 0;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 50%;
@@ -630,8 +632,8 @@ p {
 
     90%,
     100% {
-        stroke: var(--bold-clr-2);
-        fill: var(--bold-clr-2);
+        stroke: var(--netral-clr-1);
+        fill: var(--netral-clr-1);
         stroke-width: 3;
         /* filter: blur(1px); */
     }
@@ -671,6 +673,9 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
+    animation: pageIn 2s forwards;
+    animation-delay: 2.5s;
+    opacity: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, var(--netral-clr-1) 100%);
 }
 

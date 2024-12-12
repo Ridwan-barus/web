@@ -6,9 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Bowlary</title>
 </head>
@@ -16,7 +14,6 @@
     <div class="preload-1">
         <div class="loader">
             <div class="loading"></div>
-            <!-- <div class="loading-visual"><div class="loaded"></div></div> -->
         </div>
         <div class="preweb">
             <div class="get-ready">
@@ -31,22 +28,15 @@
             <div class="preload-3"></div>
         </div>
     </div>
-    <!-- <section class="scene-2">
-        <div class="circle"></div>
-    </section> -->
     <div class = "base-layer">
         <div class="head">
             <div class="content">
-                <img class="foto" src="asset/doc4.jpg" alt="">
                 <svg class="pitch-deck" viewBox="0 0 1320 300">
                     <text x="50%" y="50%" text-anchor="middle">
                         PITCH DECK
                     </text>
                 </svg>
                 <div class="bowlary"><h1>BOWLARY</h1></div>
-                <!-- <div class="image">
-                    
-                </div> -->
                 <div class="effect"></div>
             </div>
         </div>
@@ -120,7 +110,6 @@
                 </div>
             </div>
             <div class="base-content-1">
-                <!-- <img src="asset/Artboard 1.png" class="img"> -->
                 <h2>Problem Solving</h2>
                 <div class="content-1">
                     <div class = "problem">
@@ -237,16 +226,9 @@
                             </div>
                             <h3>Respon Positif dari Pembeli</h3>
                         </div>
-                        <!-- <div class="item">
-                            <div class="icon">
-                                <i class="fa-solid fa-arrows-to-dot fa-3x"></i>
-                            </div>
-                            <h3>Melewati Target Perkiraan</h3>
-                        </div> -->
                     </div>
                 </div>
                 <h2>Grafik Penjualan</h2>
-                <!-- <div id="container"></div> -->
                 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
             <div class="base-content-1-5">
@@ -582,86 +564,6 @@
             }
         });
         
-        // function animateChart(chart, seriesIndex, duration) {
-        //     const series = chart.series[seriesIndex];
-        //     const maxValue = series.dataSource.map((data) => data.medal);
-        //     const steps = 60; // Jumlah frame animasi
-        //     let frame = 0;
-        
-        //     function animate() {
-        //         frame++;
-        //         const progress = Math.min(frame / steps, 1);
-                
-        //         series.dataSource.forEach((data, index) => {
-        //             data.medal = Math.floor(maxValue[index] * progress); 
-        //         });
-        
-        //         chart.refresh(); // Perbarui grafik
-        
-        //         if (progress < 1) {
-        //             requestAnimationFrame(animate); // Ulangi animasi
-        //         }
-        //     }
-        
-        //     animate();
-        // }
-            
-
-        // var chart = new ej.charts.Chart({
-        //     //Initializing Primary X Axis
-        //     primaryXAxis: {
-        //         valueType: 'Category',
-        //         title: 'Jenis Produk',
-        //     },
-        //     //Initializing Primary Y Axis
-        //      primaryYAxis: {
-        //         title: 'Total Penjualan'
-        //     },
- 
-        //     //Initializing Chart Series
-        //     series: [
-        //         {
-        //             type: 'Column',
-        //             dataSource: [
-        //                 { country: "Pre Order 1", medal: 50 },
-        //                 { country: "Pre Order 2", medal: 40 },
-        //                 { country: "Entrepreneur Fair", medal: 70 },
-        //                 { country: "Australia", medal: 60 },
-        //                 { country: "France", medal: 30 },
-        //             ],
-        //             xName: 'country',
-        //             yName: 'medal',
-
-        //             marker: {
-        //                 visible: true,
-        //                 dataLabel: {
-        //                     visible: true,  // Menampilkan label data
-        //                     position: 'Top'
-        //                 }
-        //             }
-        //         }
-        //     ],
-
-        //     tooltip: { enable: true },
-        //     legendSettings: { visible: true }
-
-        // });
-        // chart.appendTo('#container');
-
-
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //     if (entry.isIntersecting) {
-        //         entry.target.classList.add('chart-animate');
-        //     }
-        //     });
-        // });
-
-        // // Observasi Elemen Grafik
-        // const chartContainer = document.getElementById('chart-container');
-        // observer.observe(chartContainer);
-
-
 
         
 
@@ -709,52 +611,8 @@
         }
 
 
-        // slide documentation system
-        // let currentIndex = 0;
-        // const figure = document.querySelector('.documentation-slider');
-        // const slides = document.querySelectorAll('.documentation-slider .slide');
-        // const totalSlides = slides.length;
-        // const indicators = document.querySelectorAll('.slider-indicator .item');    
 
-        // function updateSlidePosition() {
-        //     figure.style.transform = `translateX(-${currentIndex * 20}%)`;
-        //     updateIndicators();
-        // }
 
-        // function updateIndicators() {
-        //     indicators.forEach((indicator, index) => {
-        //         indicator.classList.toggle('active', index === currentIndex);
-        //     });
-        // }
-
-        // document.querySelector('.next-button:last-of-type').addEventListener('click', () => {
-        //     if(currentIndex < totalSlides - 1) {
-        //         currentIndex++;
-        //     }
-        //     else {
-        //         currentIndex = 0;
-        //     }
-        //     updateSlidePosition();
-        // });
-
-        // document.querySelector('.next-button:first-of-type').addEventListener('click', () => {
-        //     if (currentIndex > 0) {
-        //         currentIndex--;
-        //     } else {
-        //         currentIndex = totalSlides - 1; // Loop kembali ke slide terakhir
-        //     }
-        //     updateSlidePosition();
-        // });
-
-        // // Event listener untuk indikator slider
-        // indicators.forEach((indicator, index) => {
-        //     indicator.addEventListener('click', () => {
-        //         currentIndex = index;
-        //         updateSlidePosition();
-        //     });
-        // });
-
-        // updateSlidePosition(); // Inisialisasi posisi pertama
 
 
         // sticky navbar system
@@ -785,11 +643,5 @@
             }
         }
         </script>
-
-    <!-- Animation On Scroll -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-      </script>
 </body>
 </html>
